@@ -1,0 +1,52 @@
+{
+  "workflow": "Assessment only; no fixes",
+  "executionOrder": [
+    "cve-known-vulnerabilities",
+    "cwe-file-path-security",
+    "cwe-injection-attacks",
+    "cwe-memory-safety",
+    "cwe-code-quality",
+    "cwe-credentials-secrets",
+    "cwe-concurrency-synchronization"
+  ],
+  "cweScansStrictlySequential": true,
+  "cve": {
+    "resolvedDependencies": 101,
+    "resolutionCommands": ["mvn dependency:list", "mvn dependency:tree"],
+    "resolutionExitCodes": [0, 0],
+    "githubAdvisoryBatches": 4,
+    "batchSizes": [30, 30, 30, 11],
+    "paginationCompleted": true,
+    "apiErrors": [],
+    "findings": 120,
+    "severityCounts": {"critical": 14, "high": 46, "medium": 44, "low": 16},
+    "scope": "Resolved compile, runtime and test dependencies, including optional devtools.",
+    "provenance": ["maven-dependencies.txt", "maven-dependency-tree.txt", "github-advisories.json", "cve-scan-coverage.json"]
+  },
+  "cwe": {
+    "applicationJavaFiles": 11,
+    "rulesAssessed": 59,
+    "found": 5,
+    "notFound": 54,
+    "foundIds": ["CWE-434", "CWE-79", "CWE-606", "CWE-789", "CWE-778"],
+    "checklistFilesUpdated": 6,
+    "pendingRules": 0,
+    "additionalScope": "Browser upload JavaScript, three Thymeleaf templates, application properties, Dockerfile, Docker Compose, Oracle initialization script, and environment example."
+  },
+  "validation": [
+    "Verified flat CVE array and unique advisory identifiers against retained API responses.",
+    "Verified all 59 CWE rule names, descriptions, severity labels and numeric story points against skill definitions.",
+    "Verified FOUND evidence paths exist and NOT_FOUND report evidence follows the required empty-files/empty-explanation schema.",
+    "Verified all checklist statuses match category report values; checklist NOT_FOUND evidence records scope.",
+    "Verified category completion timestamps are sequential."
+  ],
+  "limitations": [
+    "Static application-source assessment only; NOT_FOUND is not proof of absence.",
+    "Dependency matches establish affected versions, not application-specific exploitability or reachability.",
+    "Build plugins, operating-system packages, JVM/native dependency internals, generated code and tests are outside CWE source-review scope.",
+    "No tests, application builds, exploit execution, deployment inspection, fixes or commits performed.",
+    "Deployed identities, proxy audit logs, file permissions and database isolation were not verified.",
+    "No secret values reproduced. Required environment-variable error messages were not misclassified as default passwords.",
+    "Assessment artifacts were written directly because write_assessment_result was unavailable; merge workflow was not invoked."
+  ]
+}
