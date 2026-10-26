@@ -1,0 +1,168 @@
+{
+  "timestamp": "2026-10-26T05:23:59.776086+00:00",
+  "assessmentType": "full-existing-application; not change-scoped",
+  "workspace": "/home/runner/work/PhotoAlbum-Java/PhotoAlbum-Java",
+  "status": "completed",
+  "executionOrder": [
+    "cve-known-vulnerabilities",
+    "cwe-file-path-security",
+    "cwe-injection-attacks",
+    "cwe-memory-safety",
+    "cwe-code-quality",
+    "cwe-credentials-secrets",
+    "cwe-concurrency-synchronization"
+  ],
+  "executionMode": "Sequential skill invocation, review and persisted output; each skill completed before the next was invoked.",
+  "dependencyAssessment": {
+    "buildTool": "Maven",
+    "resolutionCommand": "mvn dependency:tree -DoutputFile=.github/modernize/assessment/engines/security/maven-dependency-tree.txt -B -q",
+    "resolutionExitCode": 0,
+    "resolvedDependencyCount": 101,
+    "checkedDependencyCount": 101,
+    "scopeCounts": {
+      "compile": 73,
+      "runtime": 2,
+      "test": 26
+    },
+    "directDependencyCount": 11,
+    "sources": [
+      "pom.xml",
+      ".github/modernize/assessment/engines/security/maven-dependency-tree.txt",
+      "GitHub REST https://api.github.com/advisories?ecosystem=maven&affects= (paginated batches <=30 and exact-coordinate confirmation)"
+    ],
+    "requestCount": 31,
+    "advisoryQueryFailures": [],
+    "initialCliFailure": "GitHub CLI was unauthenticated; all queries successfully retried via direct unauthenticated GitHub API HTTPS.",
+    "findings": 120,
+    "severityCounts": {
+      "critical": 14,
+      "high": 46,
+      "medium": 44,
+      "low": 16
+    },
+    "laterMergeMinimumSeverity": "medium",
+    "findingsEligibleForMediumMinimumMerge": 104,
+    "reportIncludesLowSeverity": true
+  },
+  "cweAssessment": {
+    "assessedRules": 59,
+    "found": 6,
+    "notFound": 53,
+    "pending": 0,
+    "categories": [
+      {
+        "skill": "cwe-file-path-security",
+        "rules": 5,
+        "found": 1,
+        "notFound": 4,
+        "report": ".github/modernize/assessment/engines/security/result-cwe-file-path-security.json"
+      },
+      {
+        "skill": "cwe-injection-attacks",
+        "rules": 12,
+        "found": 1,
+        "notFound": 11,
+        "report": ".github/modernize/assessment/engines/security/result-cwe-injection-attacks.json"
+      },
+      {
+        "skill": "cwe-memory-safety",
+        "rules": 15,
+        "found": 0,
+        "notFound": 15,
+        "report": ".github/modernize/assessment/engines/security/result-cwe-memory-safety.json"
+      },
+      {
+        "skill": "cwe-code-quality",
+        "rules": 16,
+        "found": 2,
+        "notFound": 14,
+        "report": ".github/modernize/assessment/engines/security/result-cwe-code-quality.json"
+      },
+      {
+        "skill": "cwe-credentials-secrets",
+        "rules": 5,
+        "found": 2,
+        "notFound": 3,
+        "report": ".github/modernize/assessment/engines/security/result-cwe-credentials-secrets.json"
+      },
+      {
+        "skill": "cwe-concurrency-synchronization",
+        "rules": 6,
+        "found": 0,
+        "notFound": 6,
+        "report": ".github/modernize/assessment/engines/security/result-cwe-concurrency-synchronization.json"
+      }
+    ],
+    "productionJavaFilesReviewed": 11,
+    "additionalReviewedFiles": [
+      "src/main/resources/static/js/upload.js",
+      "src/main/resources/templates/index.html",
+      "src/main/resources/templates/detail.html",
+      "src/main/resources/templates/layout.html",
+      "src/main/resources/application.properties",
+      "src/main/resources/application-docker.properties",
+      "Dockerfile",
+      "docker-compose.yml",
+      "oracle-init/create-user.sh",
+      "azure-setup.ps1",
+      "azure-reset.ps1",
+      ".env.example"
+    ],
+    "reviewedProductionSourceInventory": [
+      "src/main/java/com/photoalbum/PhotoAlbumApplication.java",
+      "src/main/java/com/photoalbum/config/SecurityConfig.java",
+      "src/main/java/com/photoalbum/controller/DetailController.java",
+      "src/main/java/com/photoalbum/controller/HomeController.java",
+      "src/main/java/com/photoalbum/controller/PhotoFileController.java",
+      "src/main/java/com/photoalbum/model/Photo.java",
+      "src/main/java/com/photoalbum/model/UploadResult.java",
+      "src/main/java/com/photoalbum/repository/PhotoRepository.java",
+      "src/main/java/com/photoalbum/service/PhotoService.java",
+      "src/main/java/com/photoalbum/service/impl/PhotoServiceImpl.java",
+      "src/main/java/com/photoalbum/util/MathUtil.java",
+      "src/main/resources/application-docker.properties",
+      "src/main/resources/application.properties",
+      "src/main/resources/static/js/upload.js",
+      "src/main/resources/templates/detail.html",
+      "src/main/resources/templates/index.html",
+      "src/main/resources/templates/layout.html"
+    ]
+  },
+  "limitations": [
+    "Static source/data-flow assessment, not a penetration test, formal proof or guarantee of absence. NOT_FOUND means no confirmed pattern in reviewed application scope.",
+    "No application execution, tests, builds, source modifications or commits performed. Maven dependency resolution only.",
+    "Dependency version matches are valid findings even when advisory exploit prerequisites or application reachability are not established. All resolved compile/runtime/test dependencies included. Test and optional development dependency deployment is not assumed.",
+    "Build plugin dependencies, container OS/JDK/Oracle image contents and externally CDN-loaded Bootstrap assets were not advisory-scanned. Resolved graph covers this Maven project and its transitive library dependencies, not every deployed artifact.",
+    "Runtime/third-party implementation source, live database sizes, actual external authentication/audit systems and host file ACLs/umask were not inspected. CWE-732 exposure is conditional on default permissive file creation permissions; no current credential disclosure asserted.",
+    "Authentication is required for upload/delete. Public gallery reads intentionally allow anonymous access.",
+    "Assessment is limited to the requested 59 CWE rules and dependency advisories; it is not an exhaustive catalog of every possible CWE.",
+    "Application .github/agents content was not read. Test/generated code excluded from CWE source assessment. Existing /tmp artifacts were not read or written by assessment commands; dependency resolution regenerated in project directory."
+  ],
+  "integrity": {
+    "sourceChanges": false,
+    "secretLiteralsInReports": false,
+    "reportSchemasValidated": true,
+    "checklistsMatchReports": true,
+    "uniqueCweRuleCount": 59,
+    "productionFileSha256": {
+      "src/main/java/com/photoalbum/PhotoAlbumApplication.java": "793459734c87a229ddd83e8c0d4249ac667b247c3692c8a249a00ae30b4aa8a5",
+      "src/main/java/com/photoalbum/config/SecurityConfig.java": "ec8dbbd260d05df64d7e033511599e1a02b2100ae25fef27f3204bf7529cc650",
+      "src/main/java/com/photoalbum/controller/DetailController.java": "ebe84b1bf8ad581c831d90e324a8b1c8258d48e7efa056e8f5abc75add2844f0",
+      "src/main/java/com/photoalbum/controller/HomeController.java": "42616528f3a21d3c7e47f741cd271b666bd900cc407b180f46fd6a7a8da97af2",
+      "src/main/java/com/photoalbum/controller/PhotoFileController.java": "ece34e387c6f6cb8eb03bebbb6bbdc50d1f8a17529e21d9a903b1637b6dbe3ae",
+      "src/main/java/com/photoalbum/model/Photo.java": "3ee6f2c85b2b3c4727f18ebed25dd93c430735ae019ae3f8d6735945ab2cf4c9",
+      "src/main/java/com/photoalbum/model/UploadResult.java": "dccc2820750d54f229dc8711bc1cfbe6f0df207b5d9929e9c25c7c1838266c77",
+      "src/main/java/com/photoalbum/repository/PhotoRepository.java": "1ec6f7d9fdfbcee457d23efa74bedef3f59111d9a7eba0fc259d0d3d75312b00",
+      "src/main/java/com/photoalbum/service/PhotoService.java": "236efc7268882d16f50e8887c9a1a1883d40f2763e4f8f6669458d8bdeeb2809",
+      "src/main/java/com/photoalbum/service/impl/PhotoServiceImpl.java": "8c70098f5aaf08c36a01f5ec9a91ea9ce64c75887caa7ccab952fa4b2939d7be",
+      "src/main/java/com/photoalbum/util/MathUtil.java": "a895c658eff5264ecb38560e589d06c52c4c0e5bd53c3083cad6a2a4fe6b6da0",
+      "src/main/resources/application-docker.properties": "0b6fd45530c378171964e226c20de12a6de13d56942191e540bdf3cb270db0f3",
+      "src/main/resources/application.properties": "1e0e0f98c3a1ced144730055b460ec0ed4f9d6b7280d162bf2cca9651d32e933",
+      "src/main/resources/static/css/site.css": "655877b7e805d4e4b5c43a0f9cc5fb1fd74ad6fef9b20a05e884b84ab728cd5a",
+      "src/main/resources/static/js/upload.js": "ab0cf896507c35a48b670cf30c2760a3d77e9dde6902d8a7e74c504ca3cf97c1",
+      "src/main/resources/templates/detail.html": "34ee2d1308abe011ebd772cd33094911d9a824619138424150ded3f9ccd4d8f3",
+      "src/main/resources/templates/index.html": "da0b5b6d13bd356dd7e3e9d6471dc8cdf812cc9cd61be8a01a87c9632d8d4a54",
+      "src/main/resources/templates/layout.html": "44dd33f4f75498ad21c9b19ac6dd221eb4b9af98fce002a18df88649a893d0d9"
+    }
+  }
+}
