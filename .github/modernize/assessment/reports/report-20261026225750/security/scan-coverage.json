@@ -1,0 +1,30 @@
+{
+  "dependencyCollection": "mvn dependency:tree succeeded",
+  "dependencies": 101,
+  "scopes": "compile, runtime, test; optional devtools included",
+  "minimumSeverity": "medium",
+  "advisoryCount": 120,
+  "errors": [],
+  "advisoryTransport": "Unauthenticated GitHub REST API fallback; gh CLI requires unavailable token",
+  "cveFindings": 104,
+  "cveSeverities": {
+    "critical": 14,
+    "high": 46,
+    "medium": 44
+  },
+  "cweRules": 59,
+  "cweStatuses": {
+    "FOUND": 4,
+    "NOT_FOUND": 55
+  },
+  "reviewScope": "Whole application Java/JavaScript/templates, Maven resolved dependencies, application configuration and deployment credential handling; not branch diff.",
+  "limitations": [
+    "Static analysis only; application tests, exploitation, stress testing and deployment verification were intentionally not performed.",
+    "Dependency advisories establish affected package versions, not application exploitability. Test and optional development dependencies are included and their scopes are labeled.",
+    "Managed Java/JavaScript source review excludes third-party and JDK native implementation internals.",
+    "Production authentication-event logging, infrastructure audit sinks and generated credential-file permissions were not verified.",
+    "CWE-79 filename DOM injection does not establish cross-user stored-XSS delivery; server-rendered Thymeleaf output escapes filenames.",
+    "CWE-434 NOT_FOUND: non-image acceptance under a spoofed raster-image MIME is a validation observation only; no dangerous processing/execution path was established."
+  ],
+  "dependencyScope": "all (direct and transitive)"
+}

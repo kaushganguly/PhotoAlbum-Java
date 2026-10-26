@@ -12,4 +12,6 @@ source and configuration evidence, not a verified running deployment.
 | [Configuration inventory](configuration-inventory.md) | Profiles, externalized settings, environment variables, and deployment configuration, with sensitive values redacted. |
 | [Business workflows](business-workflows.md) | Upload, browsing, retrieval, deletion, and related business rules. |
 
-Security findings are provided separately in the [assessment report](../report.md).
+Security findings are provided in the [assessment report](../report.md) and
+[security assessment](../security/security-assessment.md). The latter includes
+coverage and exploitability limitations; raw scan results accompany it.
