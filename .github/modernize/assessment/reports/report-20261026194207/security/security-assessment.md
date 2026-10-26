@@ -1,0 +1,981 @@
+# Security Assessment Report
+
+**Generated:** 2026-10-26T19:50:00.653647Z
+
+## Summary
+
+| Metric | Count |
+|---|---:|
+| Total Findings | 105 |
+| CVE Vulnerabilities | 104 |
+| CWE Vulnerabilities | 1 |
+| Total Rules Assessed | 59 |
+| Rules Passed | 58 |
+
+### By Severity
+
+| Severity | Count |
+|---|---:|
+| mandatory | 60 |
+| optional | 45 |
+| potential | 0 |
+
+## Scope and limitations
+
+- CVE range checks compare numeric version components but ignore qualifiers such as prerelease suffixes; the 104 advisory matches are candidates, not fully Maven-aware verified matches.
+
+- CVE coverage includes 101 resolved direct and transitive Maven dependency coordinates, including test dependencies; the minimum severity is medium.
+- GitHub Security Advisory matches identify affected package versions, not verified application exploitability. A missing fixed version is not evidence that no remediation exists.
+- CWE analysis covers 59 rules by source review. NOT_FOUND means no reportable match was identified, not proof that the application is vulnerability-free.
+- Browser verification of the user-assisted upload-interface XSS finding was unavailable because the Playwright transport was closed. The finding is based on traced source data flow.
+- No application code was changed and no remediation was performed. Application builds and tests were not required for these assessment-only artifacts.
+
+## CVE Findings (Dependency Vulnerabilities)
+
+### CVE-2026-47884: Spring Framework Improper Path Limitation in XsltView
+
+- **Category:** CVE
+- **Severity:** mandatory
+- **Story Points:** 1
+- **Files:** pom.xml:34
+
+Advisory candidate dependency version(s): org.springframework:spring-webmvc@5.3.31 (compile; pom.xml:34; fix None). Advisory: https://github.com/advisories/GHSA-pc63-qcmh-9cmg. These are dependency version matches, not confirmation that the vulnerable feature is used or exploitable. Test scope is identified above where applicable.
+
+### CVE-2026-65905: Apache Tomcat's DIGEST authenticator has an Authentication Bypass by Capture-replay vulnerability
+
+- **Category:** CVE
+- **Severity:** mandatory
+- **Story Points:** 1
+- **Files:** pom.xml:34
+
+Advisory candidate dependency version(s): org.apache.tomcat.embed:tomcat-embed-core@9.0.83 (compile; pom.xml:34; fix 9.0.121). Advisory: https://github.com/advisories/GHSA-9xv2-5v5q-p794. These are dependency version matches, not confirmation that the vulnerable feature is used or exploitable. Test scope is identified above where applicable.
+
+### CVE-2026-65182: Apache Tomcat has an Improper Access Control, Incorrect Authorization vulnerability
+
+- **Category:** CVE
+- **Severity:** mandatory
+- **Story Points:** 1
+- **Files:** pom.xml:34
+
+Advisory candidate dependency version(s): org.apache.tomcat.embed:tomcat-embed-core@9.0.83 (compile; pom.xml:34; fix 9.0.121). Advisory: https://github.com/advisories/GHSA-gcx9-497g-6cp6. These are dependency version matches, not confirmation that the vulnerable feature is used or exploitable. Test scope is identified above where applicable.
+
+### CVE-2026-68525: Apache Tomcat's FORM authentication process has an Incorrect Authorization vulnerability
+
+- **Category:** CVE
+- **Severity:** mandatory
+- **Story Points:** 1
+- **Files:** pom.xml:34
+
+Advisory candidate dependency version(s): org.apache.tomcat.embed:tomcat-embed-core@9.0.83 (compile; pom.xml:34; fix 9.0.121). Advisory: https://github.com/advisories/GHSA-h3x4-894j-xpx5. These are dependency version matches, not confirmation that the vulnerable feature is used or exploitable. Test scope is identified above where applicable.
+
+### CVE-2026-49844: Apache Log4j API: Improper encoding of non-finite floating-point values during MapMessage JSON serialization
+
+- **Category:** CVE
+- **Severity:** optional
+- **Story Points:** 1
+- **Files:** pom.xml:34
+
+Advisory candidate dependency version(s): org.apache.logging.log4j:log4j-api@2.17.2 (compile; pom.xml:34; fix 2.25.5). Advisory: https://github.com/advisories/GHSA-qv9r-c865-cp47. These are dependency version matches, not confirmation that the vulnerable feature is used or exploitable. Test scope is identified above where applicable.
+
+### CVE-2026-41853: Spring Framework Multipart Request Smuggling in Spring MVC and WebFlux
+
+- **Category:** CVE
+- **Severity:** optional
+- **Story Points:** 1
+- **Files:** pom.xml:34
+
+Advisory candidate dependency version(s): org.springframework:spring-webmvc@5.3.31 (compile; pom.xml:34; fix None). Advisory: https://github.com/advisories/GHSA-cjpg-rgq5-fr37. These are dependency version matches, not confirmation that the vulnerable feature is used or exploitable. Test scope is identified above where applicable.
+
+### CVE-2026-41851: Spring Framework Denial of Service via Unbounded Cache in SpEL
+
+- **Category:** CVE
+- **Severity:** optional
+- **Story Points:** 1
+- **Files:** pom.xml:34
+
+Advisory candidate dependency version(s): org.springframework:spring-expression@5.3.31 (compile; pom.xml:34; fix None). Advisory: https://github.com/advisories/GHSA-wxpp-56q6-5pcg. These are dependency version matches, not confirmation that the vulnerable feature is used or exploitable. Test scope is identified above where applicable.
+
+### CVE-2026-41850: Spring Framework Algorithmic Denial of Service via SpEL Expressions
+
+- **Category:** CVE
+- **Severity:** mandatory
+- **Story Points:** 1
+- **Files:** pom.xml:34
+
+Advisory candidate dependency version(s): org.springframework:spring-expression@5.3.31 (compile; pom.xml:34; fix None). Advisory: https://github.com/advisories/GHSA-r5w3-xv2f-j59q. These are dependency version matches, not confirmation that the vulnerable feature is used or exploitable. Test scope is identified above where applicable.
+
+### CVE-2026-41849: Spring Framework Denial of Service via Integer Overflow in SpEL Expressions
+
+- **Category:** CVE
+- **Severity:** mandatory
+- **Story Points:** 1
+- **Files:** pom.xml:34
+
+Advisory candidate dependency version(s): org.springframework:spring-expression@5.3.31 (compile; pom.xml:34; fix None). Advisory: https://github.com/advisories/GHSA-775g-4xr8-78h8. These are dependency version matches, not confirmation that the vulnerable feature is used or exploitable. Test scope is identified above where applicable.
+
+### CVE-2026-41846: Spring Framework Cross-site Scripting via JSP Form Tags
+
+- **Category:** CVE
+- **Severity:** optional
+- **Story Points:** 1
+- **Files:** pom.xml:34
+
+Advisory candidate dependency version(s): org.springframework:spring-webmvc@5.3.31 (compile; pom.xml:34; fix None). Advisory: https://github.com/advisories/GHSA-957g-f97v-vppc. These are dependency version matches, not confirmation that the vulnerable feature is used or exploitable. Test scope is identified above where applicable.
+
+### CVE-2026-41843: Spring Framework Path Traversal via Versioned Static Resources in Spring MVC and WebFlux
+
+- **Category:** CVE
+- **Severity:** optional
+- **Story Points:** 1
+- **Files:** pom.xml:34
+
+Advisory candidate dependency version(s): org.springframework:spring-webmvc@5.3.31 (compile; pom.xml:34; fix None). Advisory: https://github.com/advisories/GHSA-72pg-x5f8-j25j. These are dependency version matches, not confirmation that the vulnerable feature is used or exploitable. Test scope is identified above where applicable.
+
+### CVE-2026-41844: Spring Framework Open Redirect in Spring MVC and WebFlux
+
+- **Category:** CVE
+- **Severity:** optional
+- **Story Points:** 1
+- **Files:** pom.xml:34
+
+Advisory candidate dependency version(s): org.springframework:spring-webmvc@5.3.31 (compile; pom.xml:34; fix None). Advisory: https://github.com/advisories/GHSA-h3qp-gqrc-q736. These are dependency version matches, not confirmation that the vulnerable feature is used or exploitable. Test scope is identified above where applicable.
+
+### CVE-2026-41845: Spring Framework Cross-site Scripting via JavaScriptUtils
+
+- **Category:** CVE
+- **Severity:** mandatory
+- **Story Points:** 1
+- **Files:** pom.xml:34
+
+Advisory candidate dependency version(s): org.springframework:spring-webmvc@5.3.31 (compile; pom.xml:34; fix None). Advisory: https://github.com/advisories/GHSA-3chg-m5w7-qfv5. These are dependency version matches, not confirmation that the vulnerable feature is used or exploitable. Test scope is identified above where applicable.
+
+### CVE-2026-41841: Spring Framework Information Disclosure via Static Resource Cache in Spring MVC and WebFlux
+
+- **Category:** CVE
+- **Severity:** optional
+- **Story Points:** 1
+- **Files:** pom.xml:34
+
+Advisory candidate dependency version(s): org.springframework:spring-webmvc@5.3.31 (compile; pom.xml:34; fix None). Advisory: https://github.com/advisories/GHSA-mq64-j8f9-9gcj. These are dependency version matches, not confirmation that the vulnerable feature is used or exploitable. Test scope is identified above where applicable.
+
+### CVE-2026-41842: Spring Framework Denial of Service via Versioned Resources in Spring MVC and WebFlux
+
+- **Category:** CVE
+- **Severity:** mandatory
+- **Story Points:** 1
+- **Files:** pom.xml:34
+
+Advisory candidate dependency version(s): org.springframework:spring-webmvc@5.3.31 (compile; pom.xml:34; fix None). Advisory: https://github.com/advisories/GHSA-x23c-287f-qqv5. These are dependency version matches, not confirmation that the vulnerable feature is used or exploitable. Test scope is identified above where applicable.
+
+### CVE-2026-41284: Apache Tomcat: Unbounded read in WebDAV LOCK and  PROPFIND handling
+
+- **Category:** CVE
+- **Severity:** mandatory
+- **Story Points:** 1
+- **Files:** pom.xml:34
+
+Advisory candidate dependency version(s): org.apache.tomcat.embed:tomcat-embed-core@9.0.83 (compile; pom.xml:34; fix 9.0.118). Advisory: https://github.com/advisories/GHSA-gx5v-xp9w-j4cg. These are dependency version matches, not confirmation that the vulnerable feature is used or exploitable. Test scope is identified above where applicable.
+
+### CVE-2026-43512: Apache Tomcat - Digest authenticator will authenticate any unknown user
+
+- **Category:** CVE
+- **Severity:** mandatory
+- **Story Points:** 1
+- **Files:** pom.xml:34
+
+Advisory candidate dependency version(s): org.apache.tomcat.embed:tomcat-embed-core@9.0.83 (compile; pom.xml:34; fix 9.0.118). Advisory: https://github.com/advisories/GHSA-h6fc-48rj-7qqh. These are dependency version matches, not confirmation that the vulnerable feature is used or exploitable. Test scope is identified above where applicable.
+
+### CVE-2026-43513: Apache Tomcat: LockOutRealm treats user names as case-sensitive
+
+- **Category:** CVE
+- **Severity:** mandatory
+- **Story Points:** 1
+- **Files:** pom.xml:34
+
+Advisory candidate dependency version(s): org.apache.tomcat.embed:tomcat-embed-core@9.0.83 (compile; pom.xml:34; fix 9.0.118). Advisory: https://github.com/advisories/GHSA-5mp6-jrq3-r938. These are dependency version matches, not confirmation that the vulnerable feature is used or exploitable. Test scope is identified above where applicable.
+
+### CVE-2026-43515: Apache Tomcat - Security constraints not correctly applied
+
+- **Category:** CVE
+- **Severity:** mandatory
+- **Story Points:** 1
+- **Files:** pom.xml:34
+
+Advisory candidate dependency version(s): org.apache.tomcat.embed:tomcat-embed-core@9.0.83 (compile; pom.xml:34; fix 9.0.118). Advisory: https://github.com/advisories/GHSA-5m62-pw8w-7w9f. These are dependency version matches, not confirmation that the vulnerable feature is used or exploitable. Test scope is identified above where applicable.
+
+### CVE-2026-41293: Apache Tomcat - HTTP/2 request headers not validated
+
+- **Category:** CVE
+- **Severity:** mandatory
+- **Story Points:** 1
+- **Files:** pom.xml:34
+
+Advisory candidate dependency version(s): org.apache.tomcat.embed:tomcat-embed-core@9.0.83 (compile; pom.xml:34; fix 9.0.118). Advisory: https://github.com/advisories/GHSA-r29c-68gh-xp6x. These are dependency version matches, not confirmation that the vulnerable feature is used or exploitable. Test scope is identified above where applicable.
+
+### CVE-2026-42498: Apache Tomcat - WebSocket authentication header exposure
+
+- **Category:** CVE
+- **Severity:** mandatory
+- **Story Points:** 1
+- **Files:** pom.xml:34
+
+Advisory candidate dependency version(s): org.apache.tomcat.embed:tomcat-embed-core@9.0.83 (compile; pom.xml:34; fix 9.0.118). Advisory: https://github.com/advisories/GHSA-fv25-8xcx-gqjc. These are dependency version matches, not confirmation that the vulnerable feature is used or exploitable. Test scope is identified above where applicable.
+
+### CVE-2026-41901: Sandboxed Thymeleaf expressions vulnerable to improper recognition of unauthorized syntax patterns
+
+- **Category:** CVE
+- **Severity:** mandatory
+- **Story Points:** 1
+- **Files:** pom.xml:40
+
+Advisory candidate dependency version(s): org.thymeleaf:thymeleaf-spring5@3.0.15.RELEASE (compile; pom.xml:40; fix 3.1.5.RELEASE); org.thymeleaf:thymeleaf@3.0.15.RELEASE (compile; pom.xml:40; fix 3.1.5.RELEASE). Advisory: https://github.com/advisories/GHSA-c9ph-gxww-7744. These are dependency version matches, not confirmation that the vulnerable feature is used or exploitable. Test scope is identified above where applicable.
+
+### CVE-2026-22745: Spring MVC and WebFlux applications are vulnerable to Denial of Service attacks when resolving static resources
+
+- **Category:** CVE
+- **Severity:** optional
+- **Story Points:** 1
+- **Files:** pom.xml:34
+
+Advisory candidate dependency version(s): org.springframework:spring-webmvc@5.3.31 (compile; pom.xml:34; fix None). Advisory: https://github.com/advisories/GHSA-6p4f-wcwh-5vvm. These are dependency version matches, not confirmation that the vulnerable feature is used or exploitable. Test scope is identified above where applicable.
+
+### CVE-2026-40478: Improper neutralization of specific syntax patterns for unauthorized expressions in Thymeleaf
+
+- **Category:** CVE
+- **Severity:** mandatory
+- **Story Points:** 1
+- **Files:** pom.xml:40
+
+Advisory candidate dependency version(s): org.thymeleaf:thymeleaf-spring5@3.0.15.RELEASE (compile; pom.xml:40; fix 3.1.4.RELEASE); org.thymeleaf:thymeleaf@3.0.15.RELEASE (compile; pom.xml:40; fix 3.1.4.RELEASE). Advisory: https://github.com/advisories/GHSA-xjw8-8c5c-9r79. These are dependency version matches, not confirmation that the vulnerable feature is used or exploitable. Test scope is identified above where applicable.
+
+### CVE-2026-40477: Improper restriction of the scope of accessible objects in Thymeleaf expressions
+
+- **Category:** CVE
+- **Severity:** mandatory
+- **Story Points:** 1
+- **Files:** pom.xml:40
+
+Advisory candidate dependency version(s): org.thymeleaf:thymeleaf-spring5@3.0.15.RELEASE (compile; pom.xml:40; fix 3.1.4.RELEASE); org.thymeleaf:thymeleaf@3.0.15.RELEASE (compile; pom.xml:40; fix 3.1.4.RELEASE). Advisory: https://github.com/advisories/GHSA-r4v4-5mwr-2fwr. These are dependency version matches, not confirmation that the vulnerable feature is used or exploitable. Test scope is identified above where applicable.
+
+### CVE-2026-34483: Apache Tomcat has an Improper Encoding or Escaping of Output vulnerability in the JsonAccessLogValve
+
+- **Category:** CVE
+- **Severity:** mandatory
+- **Story Points:** 1
+- **Files:** pom.xml:34
+
+Advisory candidate dependency version(s): org.apache.tomcat.embed:tomcat-embed-core@9.0.83 (compile; pom.xml:34; fix 9.0.116). Advisory: https://github.com/advisories/GHSA-rv64-5gf8-9qq8. These are dependency version matches, not confirmation that the vulnerable feature is used or exploitable. Test scope is identified above where applicable.
+
+### CVE-2026-34487: Apache Tomcat vulnerable to Insertion of Sensitive Information into Log File
+
+- **Category:** CVE
+- **Severity:** mandatory
+- **Story Points:** 1
+- **Files:** pom.xml:34
+
+Advisory candidate dependency version(s): org.apache.tomcat.embed:tomcat-embed-core@9.0.83 (compile; pom.xml:34; fix 9.0.117). Advisory: https://github.com/advisories/GHSA-x4m4-345f-5h5g. These are dependency version matches, not confirmation that the vulnerable feature is used or exploitable. Test scope is identified above where applicable.
+
+### CVE-2026-25854: Apache Tomcat has an Open Redirect vulnerability
+
+- **Category:** CVE
+- **Severity:** optional
+- **Story Points:** 1
+- **Files:** pom.xml:34
+
+Advisory candidate dependency version(s): org.apache.tomcat.embed:tomcat-embed-core@9.0.83 (compile; pom.xml:34; fix 9.0.116). Advisory: https://github.com/advisories/GHSA-9m3c-qcxr-9x87. These are dependency version matches, not confirmation that the vulnerable feature is used or exploitable. Test scope is identified above where applicable.
+
+### CVE-2026-24880: Apache Tomcat has an HTTP Request/Response Smuggling vulnerability
+
+- **Category:** CVE
+- **Severity:** mandatory
+- **Story Points:** 1
+- **Files:** pom.xml:34
+
+Advisory candidate dependency version(s): org.apache.tomcat.embed:tomcat-embed-core@9.0.83 (compile; pom.xml:34; fix 9.0.116). Advisory: https://github.com/advisories/GHSA-563x-q5rq-57qp. These are dependency version matches, not confirmation that the vulnerable feature is used or exploitable. Test scope is identified above where applicable.
+
+### CVE-2026-22737: Spring Framework Improper Path Limitation with Script View Templates
+
+- **Category:** CVE
+- **Severity:** optional
+- **Story Points:** 1
+- **Files:** pom.xml:34
+
+Advisory candidate dependency version(s): org.springframework:spring-webmvc@5.3.31 (compile; pom.xml:34; fix None). Advisory: https://github.com/advisories/GHSA-4773-3jfm-qmx3. These are dependency version matches, not confirmation that the vulnerable feature is used or exploitable. Test scope is identified above where applicable.
+
+### CVE-2026-24734: Apache Tomcat has an Improper Input Validation vulnerability
+
+- **Category:** CVE
+- **Severity:** mandatory
+- **Story Points:** 1
+- **Files:** pom.xml:34
+
+Advisory candidate dependency version(s): org.apache.tomcat.embed:tomcat-embed-core@9.0.83 (compile; pom.xml:34; fix 9.0.115). Advisory: https://github.com/advisories/GHSA-mgp5-rv84-w37q. These are dependency version matches, not confirmation that the vulnerable feature is used or exploitable. Test scope is identified above where applicable.
+
+### CVE-2025-66614: Apache Tomcat - Client certificate verification bypass
+
+- **Category:** CVE
+- **Severity:** optional
+- **Story Points:** 1
+- **Files:** pom.xml:34
+
+Advisory candidate dependency version(s): org.apache.tomcat.embed:tomcat-embed-core@9.0.83 (compile; pom.xml:34; fix 9.0.113). Advisory: https://github.com/advisories/GHSA-fpj8-gq4v-p354. These are dependency version matches, not confirmation that the vulnerable feature is used or exploitable. Test scope is identified above where applicable.
+
+### CVE-2025-55752: Apache Tomcat Vulnerable to Relative Path Traversal
+
+- **Category:** CVE
+- **Severity:** mandatory
+- **Story Points:** 1
+- **Files:** pom.xml:34
+
+Advisory candidate dependency version(s): org.apache.tomcat.embed:tomcat-embed-core@9.0.83 (compile; pom.xml:34; fix 9.0.109). Advisory: https://github.com/advisories/GHSA-wmwf-9ccg-fff5. These are dependency version matches, not confirmation that the vulnerable feature is used or exploitable. Test scope is identified above where applicable.
+
+### CVE-2025-11226: QOS.CH logback-core is vulnerable to Arbitrary Code Execution through file processing
+
+- **Category:** CVE
+- **Severity:** optional
+- **Story Points:** 1
+- **Files:** pom.xml:34
+
+Advisory candidate dependency version(s): ch.qos.logback:logback-core@1.2.12 (compile; pom.xml:34; fix 1.3.16). Advisory: https://github.com/advisories/GHSA-25qh-j22f-pwp8. These are dependency version matches, not confirmation that the vulnerable feature is used or exploitable. Test scope is identified above where applicable.
+
+### CVE-2025-41242: Spring Framework MVC Applications Path Traversal Vulnerability
+
+- **Category:** CVE
+- **Severity:** optional
+- **Story Points:** 1
+- **Files:** pom.xml:34
+
+Advisory candidate dependency version(s): org.springframework:spring-webmvc@5.3.31 (compile; pom.xml:34; fix None). Advisory: https://github.com/advisories/GHSA-r936-gwx5-v52f. These are dependency version matches, not confirmation that the vulnerable feature is used or exploitable. Test scope is identified above where applicable.
+
+### CVE-2025-48989: Apache Tomcat Improper Resource Shutdown or Release vulnerability
+
+- **Category:** CVE
+- **Severity:** mandatory
+- **Story Points:** 1
+- **Files:** pom.xml:34
+
+Advisory candidate dependency version(s): org.apache.tomcat.embed:tomcat-embed-core@9.0.83 (compile; pom.xml:34; fix 9.0.108). Advisory: https://github.com/advisories/GHSA-gqp3-2cvr-x8m3. These are dependency version matches, not confirmation that the vulnerable feature is used or exploitable. Test scope is identified above where applicable.
+
+### CVE-2025-55668: Apache Tomcat Session Fixation vulnerability
+
+- **Category:** CVE
+- **Severity:** optional
+- **Story Points:** 1
+- **Files:** pom.xml:34
+
+Advisory candidate dependency version(s): org.apache.tomcat.embed:tomcat-embed-core@9.0.83 (compile; pom.xml:34; fix 9.0.106). Advisory: https://github.com/advisories/GHSA-23hv-mwm6-g8jf. These are dependency version matches, not confirmation that the vulnerable feature is used or exploitable. Test scope is identified above where applicable.
+
+### CVE-2025-53506: Apache Tomcat Coyote vulnerable to Denial of Service via excessive HTTP/2 streams
+
+- **Category:** CVE
+- **Severity:** mandatory
+- **Story Points:** 1
+- **Files:** pom.xml:34
+
+Advisory candidate dependency version(s): org.apache.tomcat.embed:tomcat-embed-core@9.0.83 (compile; pom.xml:34; fix 9.0.107). Advisory: https://github.com/advisories/GHSA-25xr-qj8w-c4vf. These are dependency version matches, not confirmation that the vulnerable feature is used or exploitable. Test scope is identified above where applicable.
+
+### CVE-2025-52520: Apache Tomcat Catalina is vulnerable to DoS attack through bypassing of size limits
+
+- **Category:** CVE
+- **Severity:** mandatory
+- **Story Points:** 1
+- **Files:** pom.xml:34
+
+Advisory candidate dependency version(s): org.apache.tomcat.embed:tomcat-embed-core@9.0.83 (compile; pom.xml:34; fix 9.0.107). Advisory: https://github.com/advisories/GHSA-wr62-c79q-cv37. These are dependency version matches, not confirmation that the vulnerable feature is used or exploitable. Test scope is identified above where applicable.
+
+### CVE-2025-52434: Apache Tomcat is vulnerable to resource exhaustion when using the APR/Native connector
+
+- **Category:** CVE
+- **Severity:** optional
+- **Story Points:** 1
+- **Files:** pom.xml:34
+
+Advisory candidate dependency version(s): org.apache.tomcat.embed:tomcat-embed-core@9.0.83 (compile; pom.xml:34; fix 9.0.107). Advisory: https://github.com/advisories/GHSA-4j3c-42xv-3f84. These are dependency version matches, not confirmation that the vulnerable feature is used or exploitable. Test scope is identified above where applicable.
+
+### CVE-2025-49124: Apache Tomcat installer for Windows has an untrusted search path vulnerability
+
+- **Category:** CVE
+- **Severity:** optional
+- **Story Points:** 1
+- **Files:** pom.xml:34
+
+Advisory candidate dependency version(s): org.apache.tomcat.embed:tomcat-embed-core@9.0.83 (compile; pom.xml:34; fix 9.0.106). Advisory: https://github.com/advisories/GHSA-42wg-hm62-jcwg. These are dependency version matches, not confirmation that the vulnerable feature is used or exploitable. Test scope is identified above where applicable.
+
+### CVE-2025-49125: Apache Tomcat - Security constraint bypass for pre/post-resources
+
+- **Category:** CVE
+- **Severity:** optional
+- **Story Points:** 1
+- **Files:** pom.xml:34
+
+Advisory candidate dependency version(s): org.apache.tomcat.embed:tomcat-embed-core@9.0.83 (compile; pom.xml:34; fix 9.0.106). Advisory: https://github.com/advisories/GHSA-wc4r-xq3c-5cf3. These are dependency version matches, not confirmation that the vulnerable feature is used or exploitable. Test scope is identified above where applicable.
+
+### CVE-2025-48988: Apache Tomcat - DoS in multipart upload
+
+- **Category:** CVE
+- **Severity:** mandatory
+- **Story Points:** 1
+- **Files:** pom.xml:34
+
+Advisory candidate dependency version(s): org.apache.tomcat.embed:tomcat-embed-core@9.0.83 (compile; pom.xml:34; fix 9.0.106). Advisory: https://github.com/advisories/GHSA-h3gc-qfqq-6h8f. These are dependency version matches, not confirmation that the vulnerable feature is used or exploitable. Test scope is identified above where applicable.
+
+### CVE-2025-31650: Apache Tomcat Denial of Service via invalid HTTP priority header
+
+- **Category:** CVE
+- **Severity:** optional
+- **Story Points:** 1
+- **Files:** pom.xml:34
+
+Advisory candidate dependency version(s): org.apache.tomcat.embed:tomcat-embed-core@9.0.83 (compile; pom.xml:34; fix 9.0.104). Advisory: https://github.com/advisories/GHSA-3p2h-wqq4-wf4h. These are dependency version matches, not confirmation that the vulnerable feature is used or exploitable. Test scope is identified above where applicable.
+
+### CVE-2025-24813: Apache Tomcat: Potential RCE and/or information disclosure and/or information corruption with partial PUT
+
+- **Category:** CVE
+- **Severity:** mandatory
+- **Story Points:** 1
+- **Files:** pom.xml:34
+
+Advisory candidate dependency version(s): org.apache.tomcat.embed:tomcat-embed-core@9.0.83 (compile; pom.xml:34; fix 9.0.99). Advisory: https://github.com/advisories/GHSA-83qj-6fr2-vhqg. These are dependency version matches, not confirmation that the vulnerable feature is used or exploitable. Test scope is identified above where applicable.
+
+### CVE-2024-56337: Apache Tomcat Time-of-check Time-of-use (TOCTOU) Race Condition vulnerability
+
+- **Category:** CVE
+- **Severity:** mandatory
+- **Story Points:** 1
+- **Files:** pom.xml:34
+
+Advisory candidate dependency version(s): org.apache.tomcat.embed:tomcat-embed-core@9.0.83 (compile; pom.xml:34; fix 9.0.98). Advisory: https://github.com/advisories/GHSA-27hp-xhwr-wr2m. These are dependency version matches, not confirmation that the vulnerable feature is used or exploitable. Test scope is identified above where applicable.
+
+### CVE-2024-38819: Spring Framework Path Traversal vulnerability
+
+- **Category:** CVE
+- **Severity:** mandatory
+- **Story Points:** 1
+- **Files:** pom.xml:34
+
+Advisory candidate dependency version(s): org.springframework:spring-webmvc@5.3.31 (compile; pom.xml:34; fix None). Advisory: https://github.com/advisories/GHSA-g5vr-rgqm-vf78. These are dependency version matches, not confirmation that the vulnerable feature is used or exploitable. Test scope is identified above where applicable.
+
+### CVE-2024-12798: QOS.CH logback-core Expression Language Injection vulnerability
+
+- **Category:** CVE
+- **Severity:** optional
+- **Story Points:** 1
+- **Files:** pom.xml:34
+
+Advisory candidate dependency version(s): ch.qos.logback:logback-core@1.2.12 (compile; pom.xml:34; fix 1.3.15). Advisory: https://github.com/advisories/GHSA-pr98-23f8-jwxv. These are dependency version matches, not confirmation that the vulnerable feature is used or exploitable. Test scope is identified above where applicable.
+
+### CVE-2024-50379: Apache Tomcat Time-of-check Time-of-use (TOCTOU) Race Condition vulnerability
+
+- **Category:** CVE
+- **Severity:** mandatory
+- **Story Points:** 1
+- **Files:** pom.xml:34
+
+Advisory candidate dependency version(s): org.apache.tomcat.embed:tomcat-embed-core@9.0.83 (compile; pom.xml:34; fix 9.0.98). Advisory: https://github.com/advisories/GHSA-5j33-cvvr-w245. These are dependency version matches, not confirmation that the vulnerable feature is used or exploitable. Test scope is identified above where applicable.
+
+### CVE-2024-38828: Spring MVC controller vulnerable to a DoS attack
+
+- **Category:** CVE
+- **Severity:** optional
+- **Story Points:** 1
+- **Files:** pom.xml:34
+
+Advisory candidate dependency version(s): org.springframework:spring-webmvc@5.3.31 (compile; pom.xml:34; fix 5.3.42). Advisory: https://github.com/advisories/GHSA-w3c8-7r8f-9jp8. These are dependency version matches, not confirmation that the vulnerable feature is used or exploitable. Test scope is identified above where applicable.
+
+### CVE-2024-38286: Apache Tomcat Allocation of Resources Without Limits or Throttling vulnerability
+
+- **Category:** CVE
+- **Severity:** mandatory
+- **Story Points:** 1
+- **Files:** pom.xml:34
+
+Advisory candidate dependency version(s): org.apache.tomcat.embed:tomcat-embed-core@9.0.83 (compile; pom.xml:34; fix 9.0.90). Advisory: https://github.com/advisories/GHSA-7jqf-v358-p8g7. These are dependency version matches, not confirmation that the vulnerable feature is used or exploitable. Test scope is identified above where applicable.
+
+### CVE-2024-38820: Spring Framework DataBinder Case Sensitive Match Exception
+
+- **Category:** CVE
+- **Severity:** optional
+- **Story Points:** 1
+- **Files:** pom.xml:34
+
+Advisory candidate dependency version(s): org.springframework:spring-context@5.3.31 (compile; pom.xml:34; fix None); org.springframework:spring-web@5.3.31 (compile; pom.xml:34; fix None). Advisory: https://github.com/advisories/GHSA-4gc7-5j7h-4qph. These are dependency version matches, not confirmation that the vulnerable feature is used or exploitable. Test scope is identified above where applicable.
+
+### CVE-2024-38809: Spring Framework DoS via conditional HTTP request
+
+- **Category:** CVE
+- **Severity:** optional
+- **Story Points:** 1
+- **Files:** pom.xml:34
+
+Advisory candidate dependency version(s): org.springframework:spring-web@5.3.31 (compile; pom.xml:34; fix 5.3.38). Advisory: https://github.com/advisories/GHSA-2rmj-mq67-h97g. These are dependency version matches, not confirmation that the vulnerable feature is used or exploitable. Test scope is identified above where applicable.
+
+### CVE-2024-38816: Path traversal vulnerability in functional web frameworks
+
+- **Category:** CVE
+- **Severity:** mandatory
+- **Story Points:** 1
+- **Files:** pom.xml:34
+
+Advisory candidate dependency version(s): org.springframework:spring-webmvc@5.3.31 (compile; pom.xml:34; fix None). Advisory: https://github.com/advisories/GHSA-cx7f-g6mp-7hqm. These are dependency version matches, not confirmation that the vulnerable feature is used or exploitable. Test scope is identified above where applicable.
+
+### CVE-2024-38808: Spring Framework vulnerable to Denial of Service
+
+- **Category:** CVE
+- **Severity:** optional
+- **Story Points:** 1
+- **Files:** pom.xml:34
+
+Advisory candidate dependency version(s): org.springframework:spring-expression@5.3.31 (compile; pom.xml:34; fix 5.3.39). Advisory: https://github.com/advisories/GHSA-9cmq-m9j5-mvww. These are dependency version matches, not confirmation that the vulnerable feature is used or exploitable. Test scope is identified above where applicable.
+
+### CVE-2024-34750: Apache Tomcat - Denial of Service
+
+- **Category:** CVE
+- **Severity:** mandatory
+- **Story Points:** 1
+- **Files:** pom.xml:34
+
+Advisory candidate dependency version(s): org.apache.tomcat.embed:tomcat-embed-core@9.0.83 (compile; pom.xml:34; fix 9.0.90). Advisory: https://github.com/advisories/GHSA-wm9w-rjj3-j356. These are dependency version matches, not confirmation that the vulnerable feature is used or exploitable. Test scope is identified above where applicable.
+
+### CVE-2024-22262: Spring Framework URL Parsing with Host Validation
+
+- **Category:** CVE
+- **Severity:** mandatory
+- **Story Points:** 1
+- **Files:** pom.xml:34
+
+Advisory candidate dependency version(s): org.springframework:spring-web@5.3.31 (compile; pom.xml:34; fix 5.3.34). Advisory: https://github.com/advisories/GHSA-2wrp-6fg6-hmc5. These are dependency version matches, not confirmation that the vulnerable feature is used or exploitable. Test scope is identified above where applicable.
+
+### CVE-2024-22259: Spring Framework URL Parsing with Host Validation Vulnerability
+
+- **Category:** CVE
+- **Severity:** mandatory
+- **Story Points:** 1
+- **Files:** pom.xml:34
+
+Advisory candidate dependency version(s): org.springframework:spring-web@5.3.31 (compile; pom.xml:34; fix 5.3.33). Advisory: https://github.com/advisories/GHSA-hgjh-9rj2-g67j. These are dependency version matches, not confirmation that the vulnerable feature is used or exploitable. Test scope is identified above where applicable.
+
+### CVE-2024-23672: Denial of Service via incomplete cleanup vulnerability in Apache Tomcat
+
+- **Category:** CVE
+- **Severity:** optional
+- **Story Points:** 1
+- **Files:** pom.xml:34
+
+Advisory candidate dependency version(s): org.apache.tomcat.embed:tomcat-embed-websocket@9.0.83 (compile; pom.xml:34; fix 9.0.86). Advisory: https://github.com/advisories/GHSA-v682-8vv8-vpwr. These are dependency version matches, not confirmation that the vulnerable feature is used or exploitable. Test scope is identified above where applicable.
+
+### CVE-2024-24549: Apache Tomcat Denial of Service due to improper input validation vulnerability for HTTP/2 requests
+
+- **Category:** CVE
+- **Severity:** optional
+- **Story Points:** 1
+- **Files:** pom.xml:34
+
+Advisory candidate dependency version(s): org.apache.tomcat.embed:tomcat-embed-core@9.0.83 (compile; pom.xml:34; fix 9.0.86). Advisory: https://github.com/advisories/GHSA-7w75-32cg-r6g2. These are dependency version matches, not confirmation that the vulnerable feature is used or exploitable. Test scope is identified above where applicable.
+
+### CVE-2024-22243: Spring Web vulnerable to Open Redirect or Server Side Request Forgery
+
+- **Category:** CVE
+- **Severity:** mandatory
+- **Story Points:** 1
+- **Files:** pom.xml:34
+
+Advisory candidate dependency version(s): org.springframework:spring-web@5.3.31 (compile; pom.xml:34; fix 5.3.32). Advisory: https://github.com/advisories/GHSA-ccgv-vj62-xf9h. These are dependency version matches, not confirmation that the vulnerable feature is used or exploitable. Test scope is identified above where applicable.
+
+### CVE-2023-6481: Logback is vulnerable to an attacker mounting a Denial-Of-Service attack by sending poisoned data
+
+- **Category:** CVE
+- **Severity:** mandatory
+- **Story Points:** 1
+- **Files:** pom.xml:34
+
+Advisory candidate dependency version(s): ch.qos.logback:logback-core@1.2.12 (compile; pom.xml:34; fix 1.2.13). Advisory: https://github.com/advisories/GHSA-gm62-rw4g-vrc4. These are dependency version matches, not confirmation that the vulnerable feature is used or exploitable. Test scope is identified above where applicable.
+
+### CVE-2023-6378: logback serialization vulnerability
+
+- **Category:** CVE
+- **Severity:** mandatory
+- **Story Points:** 1
+- **Files:** pom.xml:34
+
+Advisory candidate dependency version(s): ch.qos.logback:logback-classic@1.2.12 (compile; pom.xml:34; fix 1.2.13); ch.qos.logback:logback-core@1.2.12 (compile; pom.xml:34; fix 1.2.13). Advisory: https://github.com/advisories/GHSA-vmq6-5m68-f53m. These are dependency version matches, not confirmation that the vulnerable feature is used or exploitable. Test scope is identified above where applicable.
+
+### CVE-2022-1471: SnakeYaml Constructor Deserialization Remote Code Execution
+
+- **Category:** CVE
+- **Severity:** mandatory
+- **Story Points:** 1
+- **Files:** pom.xml:34
+
+Advisory candidate dependency version(s): org.yaml:snakeyaml@1.30 (compile; pom.xml:34; fix 2.0). Advisory: https://github.com/advisories/GHSA-mjmj-j48q-9wg2. These are dependency version matches, not confirmation that the vulnerable feature is used or exploitable. Test scope is identified above where applicable.
+
+### CVE-2022-41854: Snakeyaml vulnerable to Stack overflow leading to denial of service
+
+- **Category:** CVE
+- **Severity:** optional
+- **Story Points:** 1
+- **Files:** pom.xml:34
+
+Advisory candidate dependency version(s): org.yaml:snakeyaml@1.30 (compile; pom.xml:34; fix 1.32). Advisory: https://github.com/advisories/GHSA-w37g-rhq8-7m4j. These are dependency version matches, not confirmation that the vulnerable feature is used or exploitable. Test scope is identified above where applicable.
+
+### CVE-2022-38751: snakeYAML before 1.31 vulnerable to Denial of Service due to Out-of-bounds Write
+
+- **Category:** CVE
+- **Severity:** optional
+- **Story Points:** 1
+- **Files:** pom.xml:34
+
+Advisory candidate dependency version(s): org.yaml:snakeyaml@1.30 (compile; pom.xml:34; fix 1.31). Advisory: https://github.com/advisories/GHSA-98wm-3w3q-mw94. These are dependency version matches, not confirmation that the vulnerable feature is used or exploitable. Test scope is identified above where applicable.
+
+### CVE-2022-38750: snakeYAML before 1.31 vulnerable to Denial of Service due to Out-of-bounds Write
+
+- **Category:** CVE
+- **Severity:** optional
+- **Story Points:** 1
+- **Files:** pom.xml:34
+
+Advisory candidate dependency version(s): org.yaml:snakeyaml@1.30 (compile; pom.xml:34; fix 1.31). Advisory: https://github.com/advisories/GHSA-hhhw-99gj-p3c3. These are dependency version matches, not confirmation that the vulnerable feature is used or exploitable. Test scope is identified above where applicable.
+
+### CVE-2022-38749: snakeYAML before 1.31 vulnerable to Denial of Service due to Out-of-bounds Write
+
+- **Category:** CVE
+- **Severity:** optional
+- **Story Points:** 1
+- **Files:** pom.xml:34
+
+Advisory candidate dependency version(s): org.yaml:snakeyaml@1.30 (compile; pom.xml:34; fix 1.31). Advisory: https://github.com/advisories/GHSA-c4r9-r8fh-9vj2. These are dependency version matches, not confirmation that the vulnerable feature is used or exploitable. Test scope is identified above where applicable.
+
+### CVE-2022-38752: snakeYAML before 1.32 vulnerable to Denial of Service due to Out-of-bounds Write
+
+- **Category:** CVE
+- **Severity:** optional
+- **Story Points:** 1
+- **Files:** pom.xml:34
+
+Advisory candidate dependency version(s): org.yaml:snakeyaml@1.30 (compile; pom.xml:34; fix 1.32). Advisory: https://github.com/advisories/GHSA-9w3m-gqgf-c4p9. These are dependency version matches, not confirmation that the vulnerable feature is used or exploitable. Test scope is identified above where applicable.
+
+### CVE-2022-25857: Uncontrolled Resource Consumption in snakeyaml
+
+- **Category:** CVE
+- **Severity:** mandatory
+- **Story Points:** 1
+- **Files:** pom.xml:34
+
+Advisory candidate dependency version(s): org.yaml:snakeyaml@1.30 (compile; pom.xml:34; fix 1.31). Advisory: https://github.com/advisories/GHSA-3mc7-4q67-w48m. These are dependency version matches, not confirmation that the vulnerable feature is used or exploitable. Test scope is identified above where applicable.
+
+### CVE-2016-1000027: Pivotal Spring Framework contains unsafe Java deserialization methods
+
+- **Category:** CVE
+- **Severity:** mandatory
+- **Story Points:** 1
+- **Files:** pom.xml:34
+
+Advisory candidate dependency version(s): org.springframework:spring-web@5.3.31 (compile; pom.xml:34; fix 6.0.0). Advisory: https://github.com/advisories/GHSA-4wrc-f8pq-fpqp. These are dependency version matches, not confirmation that the vulnerable feature is used or exploitable. Test scope is identified above where applicable.
+
+### CVE-2026-47838: Spring Security Vulnerable to Unauthorized User Impersonation when Using X.509 Client Certificates
+
+- **Category:** CVE
+- **Severity:** optional
+- **Story Points:** 1
+- **Files:** pom.xml:65
+
+Advisory candidate dependency version(s): org.springframework.security:spring-security-web@5.7.11 (compile; pom.xml:65; fix None). Advisory: https://github.com/advisories/GHSA-293q-567p-wmwq. These are dependency version matches, not confirmation that the vulnerable feature is used or exploitable. Test scope is identified above where applicable.
+
+### CVE-2026-41721: Spring Data Commons: Denial of Service via excessive memory allocation in projection binding
+
+- **Category:** CVE
+- **Severity:** optional
+- **Story Points:** 1
+- **Files:** pom.xml:46
+
+Advisory candidate dependency version(s): org.springframework.data:spring-data-commons@2.7.18 (compile; pom.xml:46; fix None). Advisory: https://github.com/advisories/GHSA-5m4m-73w9-8433. These are dependency version matches, not confirmation that the vulnerable feature is used or exploitable. Test scope is identified above where applicable.
+
+### CVE-2026-41711: Spring Data Commons: StackOverflowException when parsing Sort parameters (DoS)
+
+- **Category:** CVE
+- **Severity:** optional
+- **Story Points:** 1
+- **Files:** pom.xml:46
+
+Advisory candidate dependency version(s): org.springframework.data:spring-data-commons@2.7.18 (compile; pom.xml:46; fix None). Advisory: https://github.com/advisories/GHSA-5vpf-xvv7-c8vh. These are dependency version matches, not confirmation that the vulnerable feature is used or exploitable. Test scope is identified above where applicable.
+
+### CVE-2026-41706: Spring Security: Open Redirect via Unvalidated Post-Login Redirect URL Stored in CookieRequestCache
+
+- **Category:** CVE
+- **Severity:** optional
+- **Story Points:** 1
+- **Files:** pom.xml:65
+
+Advisory candidate dependency version(s): org.springframework.security:spring-security-web@5.7.11 (compile; pom.xml:65; fix None). Advisory: https://github.com/advisories/GHSA-x2r2-rvhq-2mqv. These are dependency version matches, not confirmation that the vulnerable feature is used or exploitable. Test scope is identified above where applicable.
+
+### CVE-2026-41716: Spring Data Commons: Heap exhaustion from unbounded property-lookup cache retaining crafted string keys
+
+- **Category:** CVE
+- **Severity:** mandatory
+- **Story Points:** 1
+- **Files:** pom.xml:46
+
+Advisory candidate dependency version(s): org.springframework.data:spring-data-commons@2.7.18 (compile; pom.xml:46; fix None). Advisory: https://github.com/advisories/GHSA-9fw2-h3hf-293r. These are dependency version matches, not confirmation that the vulnerable feature is used or exploitable. Test scope is identified above where applicable.
+
+### CVE-2026-22732: Spring Security HTTP Headers Are not Written Under Some Conditions
+
+- **Category:** CVE
+- **Severity:** mandatory
+- **Story Points:** 1
+- **Files:** pom.xml:65
+
+Advisory candidate dependency version(s): org.springframework.security:spring-security-web@5.7.11 (compile; pom.xml:65; fix None). Advisory: https://github.com/advisories/GHSA-mf92-479x-3373. These are dependency version matches, not confirmation that the vulnerable feature is used or exploitable. Test scope is identified above where applicable.
+
+### CVE-2025-22228: Spring Security Does Not Enforce Password Length
+
+- **Category:** CVE
+- **Severity:** mandatory
+- **Story Points:** 1
+- **Files:** pom.xml:65
+
+Advisory candidate dependency version(s): org.springframework.security:spring-security-crypto@5.7.11 (compile; pom.xml:65; fix 5.7.16). Advisory: https://github.com/advisories/GHSA-mg83-c7gq-rv5c. These are dependency version matches, not confirmation that the vulnerable feature is used or exploitable. Test scope is identified above where applicable.
+
+### CVE-2024-38827: Spring Framework has Authorization Bypass for Case Sensitive Comparisons
+
+- **Category:** CVE
+- **Severity:** optional
+- **Story Points:** 1
+- **Files:** pom.xml:65
+
+Advisory candidate dependency version(s): org.springframework.security:spring-security-core@5.7.11 (compile; pom.xml:65; fix 5.7.14). Advisory: https://github.com/advisories/GHSA-q3v6-hm2v-pw99. These are dependency version matches, not confirmation that the vulnerable feature is used or exploitable. Test scope is identified above where applicable.
+
+### CVE-2024-38821: Spring Security vulnerable to Authorization Bypass of Static Resources in WebFlux Applications
+
+- **Category:** CVE
+- **Severity:** mandatory
+- **Story Points:** 1
+- **Files:** pom.xml:65
+
+Advisory candidate dependency version(s): org.springframework.security:spring-security-web@5.7.11 (compile; pom.xml:65; fix 5.7.13). Advisory: https://github.com/advisories/GHSA-c4q5-6c82-3qpw. These are dependency version matches, not confirmation that the vulnerable feature is used or exploitable. Test scope is identified above where applicable.
+
+### CVE-2024-22257: Erroneous authentication pass in Spring Security
+
+- **Category:** CVE
+- **Severity:** mandatory
+- **Story Points:** 1
+- **Files:** pom.xml:65
+
+Advisory candidate dependency version(s): org.springframework.security:spring-security-core@5.7.11 (compile; pom.xml:65; fix 5.7.12). Advisory: https://github.com/advisories/GHSA-f3jh-qvm4-mg39. These are dependency version matches, not confirmation that the vulnerable feature is used or exploitable. Test scope is identified above where applicable.
+
+### CVE-2026-89425: jackson-core: UTF8DataInputJsonParser._reportInvalidToken() missing maxErrorTokenLength limit -> unbounded StringBuilder growth (DoS)
+
+- **Category:** CVE
+- **Severity:** mandatory
+- **Story Points:** 1
+- **Files:** pom.xml:78
+
+Advisory candidate dependency version(s): com.fasterxml.jackson.core:jackson-core@2.13.5 (compile; pom.xml:78; fix 2.18.11). Advisory: https://github.com/advisories/GHSA-7hhh-6rmp-j9qf. These are dependency version matches, not confirmation that the vulnerable feature is used or exploitable. Test scope is identified above where applicable.
+
+### CVE-2026-91777: jackson-databind quadratic forward-reference completion
+
+- **Category:** CVE
+- **Severity:** mandatory
+- **Story Points:** 1
+- **Files:** pom.xml:78
+
+Advisory candidate dependency version(s): com.fasterxml.jackson.core:jackson-databind@2.13.5 (compile; pom.xml:78; fix 2.18.11). Advisory: https://github.com/advisories/GHSA-cxp5-3px4-pw24. These are dependency version matches, not confirmation that the vulnerable feature is used or exploitable. Test scope is identified above where applicable.
+
+### CVE-2026-91776: jackson-databind retains every unknown raw type ID
+
+- **Category:** CVE
+- **Severity:** mandatory
+- **Story Points:** 1
+- **Files:** pom.xml:78
+
+Advisory candidate dependency version(s): com.fasterxml.jackson.core:jackson-databind@2.13.5 (compile; pom.xml:78; fix 2.18.11). Advisory: https://github.com/advisories/GHSA-wv8q-qhhj-9h54. These are dependency version matches, not confirmation that the vulnerable feature is used or exploitable. Test scope is identified above where applicable.
+
+### CVE-2026-83557: jackson-databind: Comparable missing from DefaultBaseTypeLimitingValidator's unsafe base types (incomplete PolymorphicTypeValidator denylist)
+
+- **Category:** CVE
+- **Severity:** optional
+- **Story Points:** 1
+- **Files:** pom.xml:78
+
+Advisory candidate dependency version(s): com.fasterxml.jackson.core:jackson-databind@2.13.5 (compile; pom.xml:78; fix 2.18.10). Advisory: https://github.com/advisories/GHSA-gx83-3vf8-gh7j. These are dependency version matches, not confirmation that the vulnerable feature is used or exploitable. Test scope is identified above where applicable.
+
+### CVE-2026-19032: jackson-databind: Path Deserialization Missing Scheme Allowlist for FileSystemProvider Resolution
+
+- **Category:** CVE
+- **Severity:** optional
+- **Story Points:** 1
+- **Files:** pom.xml:78
+
+Advisory candidate dependency version(s): com.fasterxml.jackson.core:jackson-databind@2.13.5 (compile; pom.xml:78; fix 2.18.10). Advisory: https://github.com/advisories/GHSA-wjgm-6hv5-3cvf. These are dependency version matches, not confirmation that the vulnerable feature is used or exploitable. Test scope is identified above where applicable.
+
+### CVE-2026-77310: jackson-databind: Incomplete fix for CVE-2026-54514: eager DNS resolution (SSRF) still present in InetAddress deserialization
+
+- **Category:** CVE
+- **Severity:** optional
+- **Story Points:** 1
+- **Files:** pom.xml:78
+
+Advisory candidate dependency version(s): com.fasterxml.jackson.core:jackson-databind@2.13.5 (compile; pom.xml:78; fix 2.18.9). Advisory: https://github.com/advisories/GHSA-vvgp-rfg2-7rr6. These are dependency version matches, not confirmation that the vulnerable feature is used or exploitable. Test scope is identified above where applicable.
+
+### CVE-2026-59889: jackson-databind: @JsonView bypassed for @JsonUnwrapped container properties on deserialization
+
+- **Category:** CVE
+- **Severity:** optional
+- **Story Points:** 1
+- **Files:** pom.xml:78
+
+Advisory candidate dependency version(s): com.fasterxml.jackson.core:jackson-databind@2.13.5 (compile; pom.xml:78; fix 2.18.9). Advisory: https://github.com/advisories/GHSA-5gvw-p9qm-jgwh. These are dependency version matches, not confirmation that the vulnerable feature is used or exploitable. Test scope is identified above where applicable.
+
+### CVE-2026-68494: jackson-core: Async parser maxNumberLength bypass via chunked digit accumulation (incomplete fix for GHSA-72hv-8253-57qq)
+
+- **Category:** CVE
+- **Severity:** mandatory
+- **Story Points:** 1
+- **Files:** pom.xml:78
+
+Advisory candidate dependency version(s): com.fasterxml.jackson.core:jackson-core@2.13.5 (compile; pom.xml:78; fix 2.18.8). Advisory: https://github.com/advisories/GHSA-r7wm-3cxj-wff9. These are dependency version matches, not confirmation that the vulnerable feature is used or exploitable. Test scope is identified above where applicable.
+
+### CVE-2026-54515: jackson-databind has case-insensitive deserialization bypasses per-property @JsonIgnoreProperties
+
+- **Category:** CVE
+- **Severity:** optional
+- **Story Points:** 1
+- **Files:** pom.xml:78
+
+Advisory candidate dependency version(s): com.fasterxml.jackson.core:jackson-databind@2.13.5 (compile; pom.xml:78; fix 2.18.9). Advisory: https://github.com/advisories/GHSA-5jmj-h7xm-6q6v. These are dependency version matches, not confirmation that the vulnerable feature is used or exploitable. Test scope is identified above where applicable.
+
+### CVE-2026-54514: jackson-databind: InetSocketAddress deserialization triggers eager DNS resolution (SSRF)
+
+- **Category:** CVE
+- **Severity:** optional
+- **Story Points:** 1
+- **Files:** pom.xml:78
+
+Advisory candidate dependency version(s): com.fasterxml.jackson.core:jackson-databind@2.13.5 (compile; pom.xml:78; fix 2.18.8). Advisory: https://github.com/advisories/GHSA-hgj6-7826-r7m5. These are dependency version matches, not confirmation that the vulnerable feature is used or exploitable. Test scope is identified above where applicable.
+
+### CVE-2026-54513: jackson-databind has an array subtype allowlist bypass in BasicPolymorphicTypeValidator (allowIfSubTypeIsArray)
+
+- **Category:** CVE
+- **Severity:** mandatory
+- **Story Points:** 1
+- **Files:** pom.xml:78
+
+Advisory candidate dependency version(s): com.fasterxml.jackson.core:jackson-databind@2.13.5 (compile; pom.xml:78; fix 2.18.8). Advisory: https://github.com/advisories/GHSA-rmj7-2vxq-3g9f. These are dependency version matches, not confirmation that the vulnerable feature is used or exploitable. Test scope is identified above where applicable.
+
+### CVE-2026-54512: jackson-databind has a PolymorphicTypeValidator bypass via generic type parameters that allows arbitrary class instantiation
+
+- **Category:** CVE
+- **Severity:** mandatory
+- **Story Points:** 1
+- **Files:** pom.xml:78
+
+Advisory candidate dependency version(s): com.fasterxml.jackson.core:jackson-databind@2.13.5 (compile; pom.xml:78; fix 2.18.8). Advisory: https://github.com/advisories/GHSA-j3rv-43j4-c7qm. These are dependency version matches, not confirmation that the vulnerable feature is used or exploitable. Test scope is identified above where applicable.
+
+### CVE-2026-50193: jackson-databind: Deeply nested JsonNode throws StackOverflowError for toString()
+
+- **Category:** CVE
+- **Severity:** optional
+- **Story Points:** 1
+- **Files:** pom.xml:78
+
+Advisory candidate dependency version(s): com.fasterxml.jackson.core:jackson-databind@2.13.5 (compile; pom.xml:78; fix 2.14.0). Advisory: https://github.com/advisories/GHSA-3wrr-7qpf-2prh. These are dependency version matches, not confirmation that the vulnerable feature is used or exploitable. Test scope is identified above where applicable.
+
+### CVE-2026-24400: AssertJ has XML External Entity (XXE) vulnerability when parsing untrusted XML via isXmlEqualTo assertion
+
+- **Category:** CVE
+- **Severity:** mandatory
+- **Story Points:** 1
+- **Files:** pom.xml:84
+
+Advisory candidate dependency version(s): org.assertj:assertj-core@3.22.0 (test; pom.xml:84; fix 3.27.7). Advisory: https://github.com/advisories/GHSA-rqfh-9r24-8c9r. These are dependency version matches, not confirmation that the vulnerable feature is used or exploitable. Test scope is identified above where applicable.
+
+### CVE-2025-52999: jackson-core can throw a StackoverflowError when processing deeply nested data
+
+- **Category:** CVE
+- **Severity:** mandatory
+- **Story Points:** 1
+- **Files:** pom.xml:78
+
+Advisory candidate dependency version(s): com.fasterxml.jackson.core:jackson-core@2.13.5 (compile; pom.xml:78; fix 2.15.0). Advisory: https://github.com/advisories/GHSA-h46c-h94j-95f3. These are dependency version matches, not confirmation that the vulnerable feature is used or exploitable. Test scope is identified above where applicable.
+
+### CVE-2024-47554: Apache Commons IO: Possible denial of service attack on untrusted input to XmlStreamReader
+
+- **Category:** CVE
+- **Severity:** mandatory
+- **Story Points:** 1
+- **Files:** pom.xml:71
+
+Advisory candidate dependency version(s): commons-io:commons-io@2.11.0 (compile; pom.xml:71; fix 2.14.0). Advisory: https://github.com/advisories/GHSA-78wr-2p64-hpwj. These are dependency version matches, not confirmation that the vulnerable feature is used or exploitable. Test scope is identified above where applicable.
+
+### CVE-2023-51074: json-path Out-of-bounds Write vulnerability
+
+- **Category:** CVE
+- **Severity:** optional
+- **Story Points:** 1
+- **Files:** pom.xml:84
+
+Advisory candidate dependency version(s): com.jayway.jsonpath:json-path@2.7.0 (test; pom.xml:84; fix 2.9.0). Advisory: https://github.com/advisories/GHSA-pfh2-hfmq-phg5. These are dependency version matches, not confirmation that the vulnerable feature is used or exploitable. Test scope is identified above where applicable.
+
+### CVE-2026-41001: Spring Boot: Predictable Temp Directory in Artemis Auto-configuration
+
+- **Category:** CVE
+- **Severity:** optional
+- **Story Points:** 1
+- **Files:** pom.xml:98
+
+Advisory candidate dependency version(s): org.springframework.boot:spring-boot-autoconfigure@2.7.18 (compile; pom.xml:98; fix None). Advisory: https://github.com/advisories/GHSA-ggg2-9786-hwc8. These are dependency version matches, not confirmation that the vulnerable feature is used or exploitable. Test scope is identified above where applicable.
+
+### CVE-2026-40973: Spring Boot accepts predictable temp directory without ownership verification
+
+- **Category:** CVE
+- **Severity:** mandatory
+- **Story Points:** 1
+- **Files:** pom.xml:98
+
+Advisory candidate dependency version(s): org.springframework.boot:spring-boot@2.7.18 (compile; pom.xml:98; fix None). Advisory: https://github.com/advisories/GHSA-wwpq-f5c3-7hvx. These are dependency version matches, not confirmation that the vulnerable feature is used or exploitable. Test scope is identified above where applicable.
+
+### CVE-2026-40972: Spring Boot DevTools remote secret comparison is vulnerable to timing attacks
+
+- **Category:** CVE
+- **Severity:** mandatory
+- **Story Points:** 1
+- **Files:** pom.xml:98
+
+Advisory candidate dependency version(s): org.springframework.boot:spring-boot-devtools@2.7.18 (compile; pom.xml:98; fix None). Advisory: https://github.com/advisories/GHSA-56v8-86gj-66jp. These are dependency version matches, not confirmation that the vulnerable feature is used or exploitable. Test scope is identified above where applicable.
+
+### CVE-2025-41249: Spring Framework annotation detection mechanism may result in improper authorization
+
+- **Category:** CVE
+- **Severity:** mandatory
+- **Story Points:** 1
+- **Files:** pom.xml:84
+
+Advisory candidate dependency version(s): org.springframework:spring-core@5.3.31 (compile; pom.xml:84; fix None). Advisory: https://github.com/advisories/GHSA-jmp9-x22r-554x. These are dependency version matches, not confirmation that the vulnerable feature is used or exploitable. Test scope is identified above where applicable.
+
+### CVE-2025-22235: Spring Boot EndpointRequest.to() creates wrong matcher if actuator endpoint is not exposed
+
+- **Category:** CVE
+- **Severity:** mandatory
+- **Story Points:** 1
+- **Files:** pom.xml:98
+
+Advisory candidate dependency version(s): org.springframework.boot:spring-boot@2.7.18 (compile; pom.xml:98; fix None). Advisory: https://github.com/advisories/GHSA-rc42-6c7j-7h5r. These are dependency version matches, not confirmation that the vulnerable feature is used or exploitable. Test scope is identified above where applicable.
+
+### CVE-2022-45868: Password exposure in H2 Database
+
+- **Category:** CVE
+- **Severity:** mandatory
+- **Story Points:** 1
+- **Files:** pom.xml:91
+
+Advisory candidate dependency version(s): com.h2database:h2@2.1.214 (test; pom.xml:91; fix 2.2.220). Advisory: https://github.com/advisories/GHSA-22wj-vf5f-wrvj. These are dependency version matches, not confirmation that the vulnerable feature is used or exploitable. Test scope is identified above where applicable.
+
+
+## CWE Findings (Code-Level Vulnerabilities)
+
+### CWE-79: Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting')
+
+- **Category:** Injection Attacks
+- **Severity:** optional
+- **Story Points:** 8
+- **Files:** src/main/resources/static/js/upload.js:157, src/main/resources/static/js/upload.js:185, src/main/resources/static/js/upload.js:216, src/main/java/com/photoalbum/controller/HomeController.java:77, src/main/java/com/photoalbum/service/impl/PhotoServiceImpl.java:162
+
+User-assisted DOM XSS in the upload interface. PhotoServiceImpl.uploadPhoto preserves the multipart original filename, and HomeController.uploadPhotos returns it as originalFileName. upload.js createPhotoCard interpolates this value without escaping into HTML attributes and text at lines 185-189; displayNewPhotos inserts the result with insertAdjacentHTML at line 157. An administrator selecting or dropping an attacker-supplied image whose filename contains active HTML can cause JavaScript execution in the application origin with that administrator's browser privileges. showErrors also inserts filename-derived strings using innerHTML at lines 216-218. This is not demonstrated as persistent XSS affecting arbitrary gallery visitors: server-rendered Thymeleaf pages use escaping. Assessment severity MEDIUM, confidence 9/10. Browser execution was not verified because Playwright was unavailable.
