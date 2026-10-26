@@ -1,0 +1,734 @@
+{
+  "dependencies": [
+    {
+      "coordinate": "org.springframework.boot:spring-boot-starter-web:2.7.18",
+      "file": "pom.xml:32",
+      "direct": true,
+      "ancestor": "org.springframework.boot:spring-boot-starter-web",
+      "scope": "compile"
+    },
+    {
+      "coordinate": "org.springframework.boot:spring-boot-starter:2.7.18",
+      "file": "pom.xml:32",
+      "direct": false,
+      "ancestor": "org.springframework.boot:spring-boot-starter-web",
+      "scope": "compile"
+    },
+    {
+      "coordinate": "org.springframework.boot:spring-boot-starter-logging:2.7.18",
+      "file": "pom.xml:32",
+      "direct": false,
+      "ancestor": "org.springframework.boot:spring-boot-starter-web",
+      "scope": "compile"
+    },
+    {
+      "coordinate": "ch.qos.logback:logback-classic:1.2.12",
+      "file": "pom.xml:32",
+      "direct": false,
+      "ancestor": "org.springframework.boot:spring-boot-starter-web",
+      "scope": "compile"
+    },
+    {
+      "coordinate": "ch.qos.logback:logback-core:1.2.12",
+      "file": "pom.xml:32",
+      "direct": false,
+      "ancestor": "org.springframework.boot:spring-boot-starter-web",
+      "scope": "compile"
+    },
+    {
+      "coordinate": "org.apache.logging.log4j:log4j-to-slf4j:2.17.2",
+      "file": "pom.xml:32",
+      "direct": false,
+      "ancestor": "org.springframework.boot:spring-boot-starter-web",
+      "scope": "compile"
+    },
+    {
+      "coordinate": "org.apache.logging.log4j:log4j-api:2.17.2",
+      "file": "pom.xml:32",
+      "direct": false,
+      "ancestor": "org.springframework.boot:spring-boot-starter-web",
+      "scope": "compile"
+    },
+    {
+      "coordinate": "org.slf4j:jul-to-slf4j:1.7.36",
+      "file": "pom.xml:32",
+      "direct": false,
+      "ancestor": "org.springframework.boot:spring-boot-starter-web",
+      "scope": "compile"
+    },
+    {
+      "coordinate": "jakarta.annotation:jakarta.annotation-api:1.3.5",
+      "file": "pom.xml:32",
+      "direct": false,
+      "ancestor": "org.springframework.boot:spring-boot-starter-web",
+      "scope": "compile"
+    },
+    {
+      "coordinate": "org.yaml:snakeyaml:1.30",
+      "file": "pom.xml:32",
+      "direct": false,
+      "ancestor": "org.springframework.boot:spring-boot-starter-web",
+      "scope": "compile"
+    },
+    {
+      "coordinate": "org.springframework.boot:spring-boot-starter-tomcat:2.7.18",
+      "file": "pom.xml:32",
+      "direct": false,
+      "ancestor": "org.springframework.boot:spring-boot-starter-web",
+      "scope": "compile"
+    },
+    {
+      "coordinate": "org.apache.tomcat.embed:tomcat-embed-core:9.0.83",
+      "file": "pom.xml:32",
+      "direct": false,
+      "ancestor": "org.springframework.boot:spring-boot-starter-web",
+      "scope": "compile"
+    },
+    {
+      "coordinate": "org.apache.tomcat.embed:tomcat-embed-websocket:9.0.83",
+      "file": "pom.xml:32",
+      "direct": false,
+      "ancestor": "org.springframework.boot:spring-boot-starter-web",
+      "scope": "compile"
+    },
+    {
+      "coordinate": "org.springframework:spring-web:5.3.31",
+      "file": "pom.xml:32",
+      "direct": false,
+      "ancestor": "org.springframework.boot:spring-boot-starter-web",
+      "scope": "compile"
+    },
+    {
+      "coordinate": "org.springframework:spring-beans:5.3.31",
+      "file": "pom.xml:32",
+      "direct": false,
+      "ancestor": "org.springframework.boot:spring-boot-starter-web",
+      "scope": "compile"
+    },
+    {
+      "coordinate": "org.springframework:spring-webmvc:5.3.31",
+      "file": "pom.xml:32",
+      "direct": false,
+      "ancestor": "org.springframework.boot:spring-boot-starter-web",
+      "scope": "compile"
+    },
+    {
+      "coordinate": "org.springframework:spring-context:5.3.31",
+      "file": "pom.xml:32",
+      "direct": false,
+      "ancestor": "org.springframework.boot:spring-boot-starter-web",
+      "scope": "compile"
+    },
+    {
+      "coordinate": "org.springframework:spring-expression:5.3.31",
+      "file": "pom.xml:32",
+      "direct": false,
+      "ancestor": "org.springframework.boot:spring-boot-starter-web",
+      "scope": "compile"
+    },
+    {
+      "coordinate": "org.springframework.boot:spring-boot-starter-thymeleaf:2.7.18",
+      "file": "pom.xml:38",
+      "direct": true,
+      "ancestor": "org.springframework.boot:spring-boot-starter-thymeleaf",
+      "scope": "compile"
+    },
+    {
+      "coordinate": "org.thymeleaf:thymeleaf-spring5:3.0.15.RELEASE",
+      "file": "pom.xml:38",
+      "direct": false,
+      "ancestor": "org.springframework.boot:spring-boot-starter-thymeleaf",
+      "scope": "compile"
+    },
+    {
+      "coordinate": "org.thymeleaf:thymeleaf:3.0.15.RELEASE",
+      "file": "pom.xml:38",
+      "direct": false,
+      "ancestor": "org.springframework.boot:spring-boot-starter-thymeleaf",
+      "scope": "compile"
+    },
+    {
+      "coordinate": "org.attoparser:attoparser:2.0.5.RELEASE",
+      "file": "pom.xml:38",
+      "direct": false,
+      "ancestor": "org.springframework.boot:spring-boot-starter-thymeleaf",
+      "scope": "compile"
+    },
+    {
+      "coordinate": "org.unbescape:unbescape:1.1.6.RELEASE",
+      "file": "pom.xml:38",
+      "direct": false,
+      "ancestor": "org.springframework.boot:spring-boot-starter-thymeleaf",
+      "scope": "compile"
+    },
+    {
+      "coordinate": "org.slf4j:slf4j-api:1.7.36",
+      "file": "pom.xml:38",
+      "direct": false,
+      "ancestor": "org.springframework.boot:spring-boot-starter-thymeleaf",
+      "scope": "compile"
+    },
+    {
+      "coordinate": "org.thymeleaf.extras:thymeleaf-extras-java8time:3.0.4.RELEASE",
+      "file": "pom.xml:38",
+      "direct": false,
+      "ancestor": "org.springframework.boot:spring-boot-starter-thymeleaf",
+      "scope": "compile"
+    },
+    {
+      "coordinate": "org.springframework.boot:spring-boot-starter-data-jpa:2.7.18",
+      "file": "pom.xml:44",
+      "direct": true,
+      "ancestor": "org.springframework.boot:spring-boot-starter-data-jpa",
+      "scope": "compile"
+    },
+    {
+      "coordinate": "org.springframework.boot:spring-boot-starter-aop:2.7.18",
+      "file": "pom.xml:44",
+      "direct": false,
+      "ancestor": "org.springframework.boot:spring-boot-starter-data-jpa",
+      "scope": "compile"
+    },
+    {
+      "coordinate": "org.aspectj:aspectjweaver:1.9.7",
+      "file": "pom.xml:44",
+      "direct": false,
+      "ancestor": "org.springframework.boot:spring-boot-starter-data-jpa",
+      "scope": "compile"
+    },
+    {
+      "coordinate": "org.springframework.boot:spring-boot-starter-jdbc:2.7.18",
+      "file": "pom.xml:44",
+      "direct": false,
+      "ancestor": "org.springframework.boot:spring-boot-starter-data-jpa",
+      "scope": "compile"
+    },
+    {
+      "coordinate": "com.zaxxer:HikariCP:4.0.3",
+      "file": "pom.xml:44",
+      "direct": false,
+      "ancestor": "org.springframework.boot:spring-boot-starter-data-jpa",
+      "scope": "compile"
+    },
+    {
+      "coordinate": "org.springframework:spring-jdbc:5.3.31",
+      "file": "pom.xml:44",
+      "direct": false,
+      "ancestor": "org.springframework.boot:spring-boot-starter-data-jpa",
+      "scope": "compile"
+    },
+    {
+      "coordinate": "jakarta.transaction:jakarta.transaction-api:1.3.3",
+      "file": "pom.xml:44",
+      "direct": false,
+      "ancestor": "org.springframework.boot:spring-boot-starter-data-jpa",
+      "scope": "compile"
+    },
+    {
+      "coordinate": "jakarta.persistence:jakarta.persistence-api:2.2.3",
+      "file": "pom.xml:44",
+      "direct": false,
+      "ancestor": "org.springframework.boot:spring-boot-starter-data-jpa",
+      "scope": "compile"
+    },
+    {
+      "coordinate": "org.hibernate:hibernate-core:5.6.15.Final",
+      "file": "pom.xml:44",
+      "direct": false,
+      "ancestor": "org.springframework.boot:spring-boot-starter-data-jpa",
+      "scope": "compile"
+    },
+    {
+      "coordinate": "org.jboss.logging:jboss-logging:3.4.3.Final",
+      "file": "pom.xml:44",
+      "direct": false,
+      "ancestor": "org.springframework.boot:spring-boot-starter-data-jpa",
+      "scope": "compile"
+    },
+    {
+      "coordinate": "net.bytebuddy:byte-buddy:1.12.23",
+      "file": "pom.xml:44",
+      "direct": false,
+      "ancestor": "org.springframework.boot:spring-boot-starter-data-jpa",
+      "scope": "compile"
+    },
+    {
+      "coordinate": "antlr:antlr:2.7.7",
+      "file": "pom.xml:44",
+      "direct": false,
+      "ancestor": "org.springframework.boot:spring-boot-starter-data-jpa",
+      "scope": "compile"
+    },
+    {
+      "coordinate": "org.jboss:jandex:2.4.2.Final",
+      "file": "pom.xml:44",
+      "direct": false,
+      "ancestor": "org.springframework.boot:spring-boot-starter-data-jpa",
+      "scope": "compile"
+    },
+    {
+      "coordinate": "com.fasterxml:classmate:1.5.1",
+      "file": "pom.xml:44",
+      "direct": false,
+      "ancestor": "org.springframework.boot:spring-boot-starter-data-jpa",
+      "scope": "compile"
+    },
+    {
+      "coordinate": "org.hibernate.common:hibernate-commons-annotations:5.1.2.Final",
+      "file": "pom.xml:44",
+      "direct": false,
+      "ancestor": "org.springframework.boot:spring-boot-starter-data-jpa",
+      "scope": "compile"
+    },
+    {
+      "coordinate": "org.glassfish.jaxb:jaxb-runtime:2.3.9",
+      "file": "pom.xml:44",
+      "direct": false,
+      "ancestor": "org.springframework.boot:spring-boot-starter-data-jpa",
+      "scope": "compile"
+    },
+    {
+      "coordinate": "org.glassfish.jaxb:txw2:2.3.9",
+      "file": "pom.xml:44",
+      "direct": false,
+      "ancestor": "org.springframework.boot:spring-boot-starter-data-jpa",
+      "scope": "compile"
+    },
+    {
+      "coordinate": "com.sun.istack:istack-commons-runtime:3.0.12",
+      "file": "pom.xml:44",
+      "direct": false,
+      "ancestor": "org.springframework.boot:spring-boot-starter-data-jpa",
+      "scope": "compile"
+    },
+    {
+      "coordinate": "com.sun.activation:jakarta.activation:1.2.2",
+      "file": "pom.xml:44",
+      "direct": false,
+      "ancestor": "org.springframework.boot:spring-boot-starter-data-jpa",
+      "scope": "runtime"
+    },
+    {
+      "coordinate": "org.springframework.data:spring-data-jpa:2.7.18",
+      "file": "pom.xml:44",
+      "direct": false,
+      "ancestor": "org.springframework.boot:spring-boot-starter-data-jpa",
+      "scope": "compile"
+    },
+    {
+      "coordinate": "org.springframework.data:spring-data-commons:2.7.18",
+      "file": "pom.xml:44",
+      "direct": false,
+      "ancestor": "org.springframework.boot:spring-boot-starter-data-jpa",
+      "scope": "compile"
+    },
+    {
+      "coordinate": "org.springframework:spring-orm:5.3.31",
+      "file": "pom.xml:44",
+      "direct": false,
+      "ancestor": "org.springframework.boot:spring-boot-starter-data-jpa",
+      "scope": "compile"
+    },
+    {
+      "coordinate": "org.springframework:spring-tx:5.3.31",
+      "file": "pom.xml:44",
+      "direct": false,
+      "ancestor": "org.springframework.boot:spring-boot-starter-data-jpa",
+      "scope": "compile"
+    },
+    {
+      "coordinate": "org.springframework:spring-aspects:5.3.31",
+      "file": "pom.xml:44",
+      "direct": false,
+      "ancestor": "org.springframework.boot:spring-boot-starter-data-jpa",
+      "scope": "compile"
+    },
+    {
+      "coordinate": "com.oracle.database.jdbc:ojdbc8:21.5.0.0",
+      "file": "pom.xml:50",
+      "direct": true,
+      "ancestor": "com.oracle.database.jdbc:ojdbc8",
+      "scope": "runtime"
+    },
+    {
+      "coordinate": "org.springframework.boot:spring-boot-starter-validation:2.7.18",
+      "file": "pom.xml:57",
+      "direct": true,
+      "ancestor": "org.springframework.boot:spring-boot-starter-validation",
+      "scope": "compile"
+    },
+    {
+      "coordinate": "org.apache.tomcat.embed:tomcat-embed-el:9.0.83",
+      "file": "pom.xml:57",
+      "direct": false,
+      "ancestor": "org.springframework.boot:spring-boot-starter-validation",
+      "scope": "compile"
+    },
+    {
+      "coordinate": "org.hibernate.validator:hibernate-validator:6.2.5.Final",
+      "file": "pom.xml:57",
+      "direct": false,
+      "ancestor": "org.springframework.boot:spring-boot-starter-validation",
+      "scope": "compile"
+    },
+    {
+      "coordinate": "jakarta.validation:jakarta.validation-api:2.0.2",
+      "file": "pom.xml:57",
+      "direct": false,
+      "ancestor": "org.springframework.boot:spring-boot-starter-validation",
+      "scope": "compile"
+    },
+    {
+      "coordinate": "org.springframework.boot:spring-boot-starter-security:2.7.18",
+      "file": "pom.xml:63",
+      "direct": true,
+      "ancestor": "org.springframework.boot:spring-boot-starter-security",
+      "scope": "compile"
+    },
+    {
+      "coordinate": "org.springframework:spring-aop:5.3.31",
+      "file": "pom.xml:63",
+      "direct": false,
+      "ancestor": "org.springframework.boot:spring-boot-starter-security",
+      "scope": "compile"
+    },
+    {
+      "coordinate": "org.springframework.security:spring-security-config:5.7.11",
+      "file": "pom.xml:63",
+      "direct": false,
+      "ancestor": "org.springframework.boot:spring-boot-starter-security",
+      "scope": "compile"
+    },
+    {
+      "coordinate": "org.springframework.security:spring-security-core:5.7.11",
+      "file": "pom.xml:63",
+      "direct": false,
+      "ancestor": "org.springframework.boot:spring-boot-starter-security",
+      "scope": "compile"
+    },
+    {
+      "coordinate": "org.springframework.security:spring-security-crypto:5.7.11",
+      "file": "pom.xml:63",
+      "direct": false,
+      "ancestor": "org.springframework.boot:spring-boot-starter-security",
+      "scope": "compile"
+    },
+    {
+      "coordinate": "org.springframework.security:spring-security-web:5.7.11",
+      "file": "pom.xml:63",
+      "direct": false,
+      "ancestor": "org.springframework.boot:spring-boot-starter-security",
+      "scope": "compile"
+    },
+    {
+      "coordinate": "commons-io:commons-io:2.11.0",
+      "file": "pom.xml:69",
+      "direct": true,
+      "ancestor": "commons-io:commons-io",
+      "scope": "compile"
+    },
+    {
+      "coordinate": "org.springframework.boot:spring-boot-starter-json:2.7.18",
+      "file": "pom.xml:76",
+      "direct": true,
+      "ancestor": "org.springframework.boot:spring-boot-starter-json",
+      "scope": "compile"
+    },
+    {
+      "coordinate": "com.fasterxml.jackson.core:jackson-databind:2.13.5",
+      "file": "pom.xml:76",
+      "direct": false,
+      "ancestor": "org.springframework.boot:spring-boot-starter-json",
+      "scope": "compile"
+    },
+    {
+      "coordinate": "com.fasterxml.jackson.core:jackson-annotations:2.13.5",
+      "file": "pom.xml:76",
+      "direct": false,
+      "ancestor": "org.springframework.boot:spring-boot-starter-json",
+      "scope": "compile"
+    },
+    {
+      "coordinate": "com.fasterxml.jackson.core:jackson-core:2.13.5",
+      "file": "pom.xml:76",
+      "direct": false,
+      "ancestor": "org.springframework.boot:spring-boot-starter-json",
+      "scope": "compile"
+    },
+    {
+      "coordinate": "com.fasterxml.jackson.datatype:jackson-datatype-jdk8:2.13.5",
+      "file": "pom.xml:76",
+      "direct": false,
+      "ancestor": "org.springframework.boot:spring-boot-starter-json",
+      "scope": "compile"
+    },
+    {
+      "coordinate": "com.fasterxml.jackson.datatype:jackson-datatype-jsr310:2.13.5",
+      "file": "pom.xml:76",
+      "direct": false,
+      "ancestor": "org.springframework.boot:spring-boot-starter-json",
+      "scope": "compile"
+    },
+    {
+      "coordinate": "com.fasterxml.jackson.module:jackson-module-parameter-names:2.13.5",
+      "file": "pom.xml:76",
+      "direct": false,
+      "ancestor": "org.springframework.boot:spring-boot-starter-json",
+      "scope": "compile"
+    },
+    {
+      "coordinate": "org.springframework.boot:spring-boot-starter-test:2.7.18",
+      "file": "pom.xml:82",
+      "direct": true,
+      "ancestor": "org.springframework.boot:spring-boot-starter-test",
+      "scope": "test"
+    },
+    {
+      "coordinate": "org.springframework.boot:spring-boot-test:2.7.18",
+      "file": "pom.xml:82",
+      "direct": false,
+      "ancestor": "org.springframework.boot:spring-boot-starter-test",
+      "scope": "test"
+    },
+    {
+      "coordinate": "org.springframework.boot:spring-boot-test-autoconfigure:2.7.18",
+      "file": "pom.xml:82",
+      "direct": false,
+      "ancestor": "org.springframework.boot:spring-boot-starter-test",
+      "scope": "test"
+    },
+    {
+      "coordinate": "com.jayway.jsonpath:json-path:2.7.0",
+      "file": "pom.xml:82",
+      "direct": false,
+      "ancestor": "org.springframework.boot:spring-boot-starter-test",
+      "scope": "test"
+    },
+    {
+      "coordinate": "net.minidev:json-smart:2.4.11",
+      "file": "pom.xml:82",
+      "direct": false,
+      "ancestor": "org.springframework.boot:spring-boot-starter-test",
+      "scope": "test"
+    },
+    {
+      "coordinate": "net.minidev:accessors-smart:2.4.11",
+      "file": "pom.xml:82",
+      "direct": false,
+      "ancestor": "org.springframework.boot:spring-boot-starter-test",
+      "scope": "test"
+    },
+    {
+      "coordinate": "org.ow2.asm:asm:9.3",
+      "file": "pom.xml:82",
+      "direct": false,
+      "ancestor": "org.springframework.boot:spring-boot-starter-test",
+      "scope": "test"
+    },
+    {
+      "coordinate": "jakarta.xml.bind:jakarta.xml.bind-api:2.3.3",
+      "file": "pom.xml:82",
+      "direct": false,
+      "ancestor": "org.springframework.boot:spring-boot-starter-test",
+      "scope": "compile"
+    },
+    {
+      "coordinate": "jakarta.activation:jakarta.activation-api:1.2.2",
+      "file": "pom.xml:82",
+      "direct": false,
+      "ancestor": "org.springframework.boot:spring-boot-starter-test",
+      "scope": "compile"
+    },
+    {
+      "coordinate": "org.assertj:assertj-core:3.22.0",
+      "file": "pom.xml:82",
+      "direct": false,
+      "ancestor": "org.springframework.boot:spring-boot-starter-test",
+      "scope": "test"
+    },
+    {
+      "coordinate": "org.hamcrest:hamcrest:2.2",
+      "file": "pom.xml:82",
+      "direct": false,
+      "ancestor": "org.springframework.boot:spring-boot-starter-test",
+      "scope": "test"
+    },
+    {
+      "coordinate": "org.junit.jupiter:junit-jupiter:5.8.2",
+      "file": "pom.xml:82",
+      "direct": false,
+      "ancestor": "org.springframework.boot:spring-boot-starter-test",
+      "scope": "test"
+    },
+    {
+      "coordinate": "org.junit.jupiter:junit-jupiter-api:5.8.2",
+      "file": "pom.xml:82",
+      "direct": false,
+      "ancestor": "org.springframework.boot:spring-boot-starter-test",
+      "scope": "test"
+    },
+    {
+      "coordinate": "org.opentest4j:opentest4j:1.2.0",
+      "file": "pom.xml:82",
+      "direct": false,
+      "ancestor": "org.springframework.boot:spring-boot-starter-test",
+      "scope": "test"
+    },
+    {
+      "coordinate": "org.junit.platform:junit-platform-commons:1.8.2",
+      "file": "pom.xml:82",
+      "direct": false,
+      "ancestor": "org.springframework.boot:spring-boot-starter-test",
+      "scope": "test"
+    },
+    {
+      "coordinate": "org.apiguardian:apiguardian-api:1.1.2",
+      "file": "pom.xml:82",
+      "direct": false,
+      "ancestor": "org.springframework.boot:spring-boot-starter-test",
+      "scope": "test"
+    },
+    {
+      "coordinate": "org.junit.jupiter:junit-jupiter-params:5.8.2",
+      "file": "pom.xml:82",
+      "direct": false,
+      "ancestor": "org.springframework.boot:spring-boot-starter-test",
+      "scope": "test"
+    },
+    {
+      "coordinate": "org.junit.jupiter:junit-jupiter-engine:5.8.2",
+      "file": "pom.xml:82",
+      "direct": false,
+      "ancestor": "org.springframework.boot:spring-boot-starter-test",
+      "scope": "test"
+    },
+    {
+      "coordinate": "org.junit.platform:junit-platform-engine:1.8.2",
+      "file": "pom.xml:82",
+      "direct": false,
+      "ancestor": "org.springframework.boot:spring-boot-starter-test",
+      "scope": "test"
+    },
+    {
+      "coordinate": "org.mockito:mockito-core:4.5.1",
+      "file": "pom.xml:82",
+      "direct": false,
+      "ancestor": "org.springframework.boot:spring-boot-starter-test",
+      "scope": "test"
+    },
+    {
+      "coordinate": "net.bytebuddy:byte-buddy-agent:1.12.23",
+      "file": "pom.xml:82",
+      "direct": false,
+      "ancestor": "org.springframework.boot:spring-boot-starter-test",
+      "scope": "test"
+    },
+    {
+      "coordinate": "org.objenesis:objenesis:3.2",
+      "file": "pom.xml:82",
+      "direct": false,
+      "ancestor": "org.springframework.boot:spring-boot-starter-test",
+      "scope": "test"
+    },
+    {
+      "coordinate": "org.mockito:mockito-junit-jupiter:4.5.1",
+      "file": "pom.xml:82",
+      "direct": false,
+      "ancestor": "org.springframework.boot:spring-boot-starter-test",
+      "scope": "test"
+    },
+    {
+      "coordinate": "org.skyscreamer:jsonassert:1.5.1",
+      "file": "pom.xml:82",
+      "direct": false,
+      "ancestor": "org.springframework.boot:spring-boot-starter-test",
+      "scope": "test"
+    },
+    {
+      "coordinate": "com.vaadin.external.google:android-json:0.0.20131108.vaadin1",
+      "file": "pom.xml:82",
+      "direct": false,
+      "ancestor": "org.springframework.boot:spring-boot-starter-test",
+      "scope": "test"
+    },
+    {
+      "coordinate": "org.springframework:spring-core:5.3.31",
+      "file": "pom.xml:82",
+      "direct": false,
+      "ancestor": "org.springframework.boot:spring-boot-starter-test",
+      "scope": "compile"
+    },
+    {
+      "coordinate": "org.springframework:spring-jcl:5.3.31",
+      "file": "pom.xml:82",
+      "direct": false,
+      "ancestor": "org.springframework.boot:spring-boot-starter-test",
+      "scope": "compile"
+    },
+    {
+      "coordinate": "org.springframework:spring-test:5.3.31",
+      "file": "pom.xml:82",
+      "direct": false,
+      "ancestor": "org.springframework.boot:spring-boot-starter-test",
+      "scope": "test"
+    },
+    {
+      "coordinate": "org.xmlunit:xmlunit-core:2.9.1",
+      "file": "pom.xml:82",
+      "direct": false,
+      "ancestor": "org.springframework.boot:spring-boot-starter-test",
+      "scope": "test"
+    },
+    {
+      "coordinate": "com.h2database:h2:2.1.214",
+      "file": "pom.xml:89",
+      "direct": true,
+      "ancestor": "com.h2database:h2",
+      "scope": "test"
+    },
+    {
+      "coordinate": "org.springframework.boot:spring-boot-devtools:2.7.18",
+      "file": "pom.xml:96",
+      "direct": true,
+      "ancestor": "org.springframework.boot:spring-boot-devtools",
+      "scope": "compile"
+    },
+    {
+      "coordinate": "org.springframework.boot:spring-boot:2.7.18",
+      "file": "pom.xml:96",
+      "direct": false,
+      "ancestor": "org.springframework.boot:spring-boot-devtools",
+      "scope": "compile"
+    },
+    {
+      "coordinate": "org.springframework.boot:spring-boot-autoconfigure:2.7.18",
+      "file": "pom.xml:96",
+      "direct": false,
+      "ancestor": "org.springframework.boot:spring-boot-devtools",
+      "scope": "compile"
+    }
+  ],
+  "batches": [
+    {
+      "dependencies": 30,
+      "advisories": 84
+    },
+    {
+      "dependencies": 30,
+      "advisories": 11
+    },
+    {
+      "dependencies": 30,
+      "advisories": 17
+    },
+    {
+      "dependencies": 11,
+      "advisories": 8
+    }
+  ],
+  "errors": [],
+  "api": "GitHub Advisories REST API, unauthenticated",
+  "minimumCveSeverity": "medium",
+  "rawAdvisoryCount": 120,
+  "includedAdvisoryCount": 104
+}

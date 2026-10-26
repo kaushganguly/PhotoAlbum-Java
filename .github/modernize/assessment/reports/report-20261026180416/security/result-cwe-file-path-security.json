@@ -1,0 +1,87 @@
+{
+  "input_name": "CWE - File & Path Security",
+  "analysis_method": "LLM",
+  "status": "success",
+  "result": {
+    "finding": "Assessed 5 CWE rules in File & Path Security: 1 FOUND, 4 NOT_FOUND",
+    "confidence": "high",
+    "evidence": [
+      "Whole-application static analysis of current src/main Java, JavaScript, templates and properties; pom.xml, Dockerfile, docker-compose.yml, .env.example, Oracle initialization and Azure PowerShell scripts.",
+      "NOT_FOUND means no confirmed matching pattern in the inspected current production/configuration scope, not proof of absence. Tests, generated code, dependencies' implementations, runtime state, history and .github/agents were excluded.",
+      "No application code edits, tests, builds, linters, exploit execution or commits. No runtime exploitability verification or dependency CVE audit. Secret values and defaults are omitted from all evidence."
+    ],
+    "values": [
+      {
+        "id": "CWE-22",
+        "name": "Improper Limitation of a Pathname to a Restricted Directory ('Path Traversal')",
+        "status": "NOT_FOUND",
+        "category": "File & Path Security",
+        "evidence": {
+          "files": [],
+          "explanation": ""
+        },
+        "severity": "optional",
+        "storyPoint": 8,
+        "description": "The product uses external input to construct a pathname that is intended to identify a file or directory that is located underneath a restricted parent directory, but the product does not properly neutralize special elements within the pathname that can cause the pathname to resolve to a location that is outside of the restricted directory."
+      },
+      {
+        "id": "CWE-23",
+        "name": "Relative Path Traversal",
+        "status": "NOT_FOUND",
+        "category": "File & Path Security",
+        "evidence": {
+          "files": [],
+          "explanation": ""
+        },
+        "severity": "optional",
+        "storyPoint": 5,
+        "description": "The product uses external input to construct a pathname that should be within a restricted directory, but it does not properly neutralize sequences such as .. that can resolve to a location that is outside of that directory."
+      },
+      {
+        "id": "CWE-36",
+        "name": "Absolute Path Traversal",
+        "status": "NOT_FOUND",
+        "category": "File & Path Security",
+        "evidence": {
+          "files": [],
+          "explanation": ""
+        },
+        "severity": "optional",
+        "storyPoint": 5,
+        "description": "The product uses external input to construct a pathname that should be within a restricted directory, but it does not properly neutralize absolute path sequences such as /abs/path that can resolve to a location that is outside of that directory."
+      },
+      {
+        "id": "CWE-434",
+        "name": "Unrestricted Upload of File with Dangerous Type",
+        "status": "FOUND",
+        "category": "File & Path Security",
+        "evidence": {
+          "files": [
+            "src/main/java/com/photoalbum/service/impl/PhotoServiceImpl.java",
+            "src/main/java/com/photoalbum/controller/PhotoFileController.java",
+            "src/main/java/com/photoalbum/controller/HomeController.java"
+          ],
+          "explanation": "HomeController.uploadPhotos (lines 55-69) accepts multipart uploads from authenticated callers. PhotoServiceImpl.uploadPhoto trusts caller-supplied Content-Type at lines 87-94, derives an unrestricted extension at lines 112-115 and 243-248, and processes bytes with ImageIO at lines 124-137. An absent ImageReader at lines 131-149 or a non-IO parsing failure at lines 155-158 does not reject the upload: arbitrary non-image content labeled as an allowed image type is persisted at lines 160-174. PhotoFileController.servePhoto returns those original bytes at lines 58-83 with the supplied MIME type. This confirms missing actual-type validation and acceptance of disguised non-image content; server-side execution and browser execution of the binary content were not established, and authentication limits the upload actor."
+        },
+        "severity": "mandatory",
+        "storyPoint": 8,
+        "description": "The product allows the upload or transfer of dangerous file types that are automatically processed within its environment."
+      },
+      {
+        "id": "CWE-611",
+        "name": "Improper Restriction of XML External Entity Reference",
+        "status": "NOT_FOUND",
+        "category": "File & Path Security",
+        "evidence": {
+          "files": [],
+          "explanation": ""
+        },
+        "severity": "optional",
+        "storyPoint": 5,
+        "description": "The product processes an XML document that can contain XML entities with URIs that resolve to documents outside of the intended sphere of control, causing the product to embed incorrect documents into its output."
+      }
+    ]
+  },
+  "execution_time_seconds": 0,
+  "timestamp": "2026-10-26T18:10:04.479045+00:00"
+}
