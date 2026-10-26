@@ -1,0 +1,74 @@
+{
+  "assessmentType": "audit-only",
+  "scope": "Whole production application source and runtime/bootstrap configuration, not a Git diff",
+  "productionJavaFilesReviewed": 11,
+  "additionalSourceReviewed": [
+    "src/main/resources/static/js/upload.js",
+    "src/main/resources/templates/detail.html",
+    "src/main/resources/templates/index.html",
+    "src/main/resources/templates/layout.html",
+    "src/main/resources/application.properties",
+    "src/main/resources/application-docker.properties",
+    "Dockerfile",
+    "docker-compose.yml",
+    ".env.example",
+    "oracle-init/create-user.sh",
+    "oracle-init/01-create-user.sql",
+    "oracle-init/02-verify-user.sql",
+    "oracle-init/healthcheck.sql",
+    "azure-setup.ps1",
+    "azure-reset.ps1"
+  ],
+  "dependencyCollection": {
+    "method": "Fresh successful Maven dependency:tree CLI invocation",
+    "exitCode": 0,
+    "resolvedDependencyCount": 101,
+    "scope": "Direct and transitive dependencies, including test and optional dependencies",
+    "advisoryProvider": "GitHub Security Advisories REST API",
+    "transport": "Unauthenticated HTTPS fallback after gh CLI reported unavailable authentication",
+    "batchSize": 30,
+    "pagination": "Followed Link rel=next",
+    "failedBatches": 0,
+    "deduplicatedFindings": 120,
+    "severityCounts": {
+      "critical": 14,
+      "high": 46,
+      "medium": 44,
+      "low": 16
+    }
+  },
+  "cweCoverage": {
+    "rulesAssessed": 59,
+    "found": 5,
+    "notFound": 54,
+    "foundIds": [
+      "CWE-79",
+      "CWE-606",
+      "CWE-665",
+      "CWE-789",
+      "CWE-778"
+    ],
+    "coreChecklistDirectory": ".github/modernize/assessment/copilot/engines/security/cweChecklist",
+    "resultDirectory": ".github/modernize/assessment/engines/security",
+    "negativeEvidence": "Protection details and limitations are recorded in each wrapper's result.evidence; NOT_FOUND rule evidence remains empty as required by the skills."
+  },
+  "limitations": [
+    "Static inspection; no exploit execution, load tests, live database operations, or deployment changes.",
+    "Dependency installed-version matches are not claims that all advisory preconditions are reachable in this application.",
+    "Version matching compares numeric release components; prerelease qualifier ordering was not evaluated.",
+    "CVE coverage excludes container OS/runtime images, Maven plugin dependency graphs, and CDN-hosted JavaScript.",
+    "CWE coverage is limited to the requested 59 rules, not an exhaustive audit of every CWE, including CSRF, transport security, and authorization policy.",
+    "Tests and generated files are excluded from production CWE findings; test-scoped dependencies remain included in CVE results.",
+    "No third-party library/JVM implementation audit, historical secret scan, live credential validation, external logging inspection, or deployed ACL verification.",
+    "Filesystem permission inheritance for the generated .env file was not established.",
+    "No claim that missing image magic-byte validation alone establishes executable or dangerous-file processing; the uncertainty is documented in file/path evidence.",
+    "Previously saved temporary outputs were not reused; Maven collection and advisory queries were rerun successfully."
+  ],
+  "verification": [
+    "Validated all seven requested result files as JSON.",
+    "Verified all 59 core checklist entries and wrapper values agree and have terminal FOUND/NOT_FOUND status.",
+    "Checked finding evidence paths exist and line references fall within source-file bounds.",
+    "Verified CVE identifiers are unique and all raw severity values belong to critical/high/medium/low.",
+    "No production modifications, commits, merging, or report rendering performed."
+  ]
+}
