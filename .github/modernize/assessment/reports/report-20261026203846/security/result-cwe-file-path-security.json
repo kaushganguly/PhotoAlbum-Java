@@ -1,0 +1,84 @@
+{
+  "input_name": "CWE - File & Path Security",
+  "analysis_method": "LLM",
+  "status": "success",
+  "result": {
+    "finding": "Assessed 5 CWE rules in File & Path Security: 1 FOUND, 4 NOT_FOUND",
+    "confidence": "high",
+    "evidence": [
+      "PhotoServiceImpl.uploadPhoto:82-174 and PhotoFileController.servePhoto:38-83 use database BLOBs, not user-derived filesystem paths. No runtime XML parsing APIs in src/main. Upload MIME validation and ImageIO reader handling reviewed.",
+      "Static source review only; no builds, tests, exploit execution, dependency internals, or generated code reviewed. NOT_FOUND is not proof of absence."
+    ],
+    "values": [
+      {
+        "id": "CWE-22",
+        "name": "Improper Limitation of a Pathname to a Restricted Directory ('Path Traversal')",
+        "status": "NOT_FOUND",
+        "category": "File & Path Security",
+        "severity": "optional",
+        "storyPoint": 8,
+        "description": "The product uses external input to construct a pathname that is intended to identify a file or directory that is located underneath a restricted parent directory, but the product does not properly neutralize special elements within the pathname that can cause the pathname to resolve to a location that is outside of the restricted directory.",
+        "evidence": {
+          "files": [],
+          "explanation": ""
+        }
+      },
+      {
+        "id": "CWE-23",
+        "name": "Relative Path Traversal",
+        "status": "NOT_FOUND",
+        "category": "File & Path Security",
+        "severity": "optional",
+        "storyPoint": 5,
+        "description": "The product uses external input to construct a pathname that should be within a restricted directory, but it does not properly neutralize sequences such as .. that can resolve to a location that is outside of that directory.",
+        "evidence": {
+          "files": [],
+          "explanation": ""
+        }
+      },
+      {
+        "id": "CWE-36",
+        "name": "Absolute Path Traversal",
+        "status": "NOT_FOUND",
+        "category": "File & Path Security",
+        "severity": "optional",
+        "storyPoint": 5,
+        "description": "The product uses external input to construct a pathname that should be within a restricted directory, but it does not properly neutralize absolute path sequences such as /abs/path that can resolve to a location that is outside of that directory.",
+        "evidence": {
+          "files": [],
+          "explanation": ""
+        }
+      },
+      {
+        "id": "CWE-434",
+        "name": "Unrestricted Upload of File with Dangerous Type",
+        "status": "FOUND",
+        "category": "File & Path Security",
+        "severity": "mandatory",
+        "storyPoint": 8,
+        "description": "The product allows the upload or transfer of dangerous file types that are automatically processed within its environment.",
+        "evidence": {
+          "files": [
+            "src/main/java/com/photoalbum/service/impl/PhotoServiceImpl.java"
+          ],
+          "explanation": "PhotoServiceImpl.uploadPhoto validates only the client-supplied MIME label at lines 87-94. At lines 130-149, an unrecognized file (no ImageIO reader) is not rejected; arbitrary bytes labeled image/jpeg are saved at lines 160-174. Non-IOException decoder failures also continue at lines 155-157. Thus non-image/dangerous content can pass the image-only upload restriction and is fed to image header processors. This establishes unrestricted content acceptance, not server-side code execution; serving uses the supplied image MIME label."
+        }
+      },
+      {
+        "id": "CWE-611",
+        "name": "Improper Restriction of XML External Entity Reference",
+        "status": "NOT_FOUND",
+        "category": "File & Path Security",
+        "severity": "optional",
+        "storyPoint": 5,
+        "description": "The product processes an XML document that can contain XML entities with URIs that resolve to documents outside of the intended sphere of control, causing the product to embed incorrect documents into its output.",
+        "evidence": {
+          "files": [],
+          "explanation": ""
+        }
+      }
+    ]
+  },
+  "execution_time_seconds": 0,
+  "timestamp": "2026-10-26T20:42:45.646389+00:00"
+}
