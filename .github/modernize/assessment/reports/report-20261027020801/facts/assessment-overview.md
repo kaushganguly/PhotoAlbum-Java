@@ -9,4 +9,4 @@ Supplementary analysis for the Photo Album application:
 - [Configuration inventory](configuration-inventory.md) — Application settings, environment variables, profiles, and operational configuration.
 - [Business workflows](business-workflows.md) — Gallery browsing, photo upload, detail viewing, and deletion sequences.
 
-See the [assessment report](../report.md) for cloud-readiness, Java-upgrade, and security findings.
+See the [assessment report](../report.md) for cloud-readiness, Java-upgrade, and security findings. The [security assessment](../security/security-assessment.md) explains scan scope, limitations, and the difference between dependency advisory matches and confirmed exploits.
