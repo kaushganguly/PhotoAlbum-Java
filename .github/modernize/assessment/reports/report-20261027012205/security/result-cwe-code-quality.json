@@ -1,0 +1,238 @@
+{
+  "input_name": "CWE - Code Quality",
+  "analysis_method": "LLM",
+  "status": "success",
+  "result": {
+    "finding": "Assessed 16 CWE rules in Code Quality: 3 FOUND, 13 NOT_FOUND",
+    "confidence": "high",
+    "evidence": [
+      "Full-source static review of all production Java, JavaScript/templates, SQL/shell bootstrap, PowerShell scripts, build/runtime configuration; not diff-only.",
+      "Reviewed every loop, allocation, initialization path, stream/reader lifecycle, numeric calculation and database-access boundary. MathUtil.gcd has a terminating remainder loop; no HTTP usage was found. Pixel multiplication widens both operands to long before multiplying (PhotoServiceImpl.java:138).",
+      "Image stream is closed by try-with-resources and reader disposed in finally (PhotoServiceImpl.java:130-149); JDBC lifecycle is framework-managed. No confirmed application resource-handle leak, malformed custom length parser, unsafe narrowing, obsolete API at the declared version, or database-manager bypass was identified.",
+      "Limitations: no performance/load/restart tests, deployed schema/configuration verification or dependency internals/CVE rescan. Resource-exhaustion consequences are static capacity risks, not experimentally demonstrated attacks; absence of patterns is not a safety guarantee."
+    ],
+    "values": [
+      {
+        "id": "CWE-130",
+        "name": "Improper Handling of Length Parameter Inconsistency",
+        "status": "NOT_FOUND",
+        "category": "Code Quality",
+        "severity": "potential",
+        "storyPoint": 3,
+        "description": "The product parses a formatted message or structure, but it does not handle or incorrectly handles a length field that is inconsistent with the actual length of the associated data.",
+        "evidence": {
+          "files": [],
+          "explanation": ""
+        }
+      },
+      {
+        "id": "CWE-456",
+        "name": "Missing Initialization of a Variable",
+        "status": "NOT_FOUND",
+        "category": "Code Quality",
+        "severity": "potential",
+        "storyPoint": 2,
+        "description": "The product does not initialize critical variables, which causes the execution environment to use unexpected values.",
+        "evidence": {
+          "files": [],
+          "explanation": ""
+        }
+      },
+      {
+        "id": "CWE-457",
+        "name": "Use of Uninitialized Variable",
+        "status": "NOT_FOUND",
+        "category": "Code Quality",
+        "severity": "potential",
+        "storyPoint": 2,
+        "description": "The code uses a variable that has not been initialized, leading to unpredictable or unintended results.",
+        "evidence": {
+          "files": [],
+          "explanation": ""
+        }
+      },
+      {
+        "id": "CWE-477",
+        "name": "Use of Obsolete Function",
+        "status": "NOT_FOUND",
+        "category": "Code Quality",
+        "severity": "optional",
+        "storyPoint": 1,
+        "description": "The code uses deprecated or obsolete functions, which suggests that the code has not been actively reviewed or maintained.",
+        "evidence": {
+          "files": [],
+          "explanation": ""
+        }
+      },
+      {
+        "id": "CWE-570",
+        "name": "Expression is Always False",
+        "status": "NOT_FOUND",
+        "category": "Code Quality",
+        "severity": "optional",
+        "storyPoint": 1,
+        "description": "The product contains an expression that will always evaluate to false.",
+        "evidence": {
+          "files": [],
+          "explanation": ""
+        }
+      },
+      {
+        "id": "CWE-571",
+        "name": "Expression is Always True",
+        "status": "NOT_FOUND",
+        "category": "Code Quality",
+        "severity": "optional",
+        "storyPoint": 1,
+        "description": "The product contains an expression that will always evaluate to true.",
+        "evidence": {
+          "files": [],
+          "explanation": ""
+        }
+      },
+      {
+        "id": "CWE-606",
+        "name": "Unchecked Input for Loop Condition",
+        "status": "FOUND",
+        "category": "Code Quality",
+        "severity": "potential",
+        "storyPoint": 3,
+        "description": "The product does not properly check inputs that are used for loop conditions, potentially leading to a denial of service or other consequences because of excessive looping.",
+        "evidence": {
+          "files": [
+            "src/main/java/com/photoalbum/controller/HomeController.java",
+            "src/main/resources/application.properties"
+          ],
+          "explanation": "HomeController.uploadPhotos lines 57-68 only rejects null/empty multipart lists, then iterates every supplied file with database/upload work at lines 69-89. The advertised app.file-upload.max-files-per-upload setting at application.properties:30 is never bound or checked. An authenticated caller can submit many small parts, causing work proportional to caller-controlled file count rather than the configured ten-file bound. The 50MB request limit constrains total bytes, and servlet multipart limits may further constrain part count; no infinite loop or unbounded single-request byte size is claimed."
+        }
+      },
+      {
+        "id": "CWE-665",
+        "name": "Improper Initialization",
+        "status": "FOUND",
+        "category": "Code Quality",
+        "severity": "potential",
+        "storyPoint": 3,
+        "description": "The product does not initialize or incorrectly initializes a resource, which might leave the resource in an unexpected state when it is accessed or used.",
+        "evidence": {
+          "files": [
+            "src/main/resources/application.properties",
+            "src/main/resources/application-docker.properties",
+            "docker-compose.yml"
+          ],
+          "explanation": "application.properties:19 and application-docker.properties:15 configure Hibernate ddl-auto=create against the application database, while docker-compose.yml:31 selects the docker profile and lines 12-13 persist database state. Hibernate create initialization drops/recreates mapped schema objects on application startup, discarding existing photo rows despite persistent database storage. This is a startup data-integrity/initialization risk in the shipped configuration, not an attacker-triggered remote exploit; an intentional disposable development deployment would narrow its impact."
+        }
+      },
+      {
+        "id": "CWE-681",
+        "name": "Incorrect Conversion between Numeric Types",
+        "status": "NOT_FOUND",
+        "category": "Code Quality",
+        "severity": "potential",
+        "storyPoint": 3,
+        "description": "When converting from one data type to another, such as long to integer, data can be omitted or translated in a way that produces unexpected values. If the resulting values are used in a sensitive context, then dangerous behaviors may occur.",
+        "evidence": {
+          "files": [],
+          "explanation": ""
+        }
+      },
+      {
+        "id": "CWE-682",
+        "name": "Incorrect Calculation",
+        "status": "NOT_FOUND",
+        "category": "Code Quality",
+        "severity": "potential",
+        "storyPoint": 5,
+        "description": "The product performs a calculation that generates incorrect or unintended results that are later used in security-critical decisions or resource management.",
+        "evidence": {
+          "files": [],
+          "explanation": ""
+        }
+      },
+      {
+        "id": "CWE-772",
+        "name": "Missing Release of Resource after Effective Lifetime",
+        "status": "NOT_FOUND",
+        "category": "Code Quality",
+        "severity": "potential",
+        "storyPoint": 3,
+        "description": "The product does not release a resource after its effective lifetime has ended, i.e., after the resource is no longer needed.",
+        "evidence": {
+          "files": [],
+          "explanation": ""
+        }
+      },
+      {
+        "id": "CWE-775",
+        "name": "Missing Release of File Descriptor or Handle after Effective Lifetime",
+        "status": "NOT_FOUND",
+        "category": "Code Quality",
+        "severity": "potential",
+        "storyPoint": 3,
+        "description": "The product does not release a file descriptor or handle after its effective lifetime has ended, i.e., after the file descriptor/handle is no longer needed.",
+        "evidence": {
+          "files": [],
+          "explanation": ""
+        }
+      },
+      {
+        "id": "CWE-783",
+        "name": "Operator Precedence Logic Error",
+        "status": "NOT_FOUND",
+        "category": "Code Quality",
+        "severity": "optional",
+        "storyPoint": 1,
+        "description": "The product uses an expression in which operator precedence causes incorrect logic to be used.",
+        "evidence": {
+          "files": [],
+          "explanation": ""
+        }
+      },
+      {
+        "id": "CWE-789",
+        "name": "Memory Allocation with Excessive Size Value",
+        "status": "FOUND",
+        "category": "Code Quality",
+        "severity": "potential",
+        "storyPoint": 5,
+        "description": "The product allocates memory based on an untrusted, large size value, but it does not ensure that the size is within expected limits, allowing arbitrary amounts of memory to be allocated.",
+        "evidence": {
+          "files": [
+            "src/main/java/com/photoalbum/controller/HomeController.java",
+            "src/main/java/com/photoalbum/repository/PhotoRepository.java",
+            "src/main/java/com/photoalbum/model/Photo.java"
+          ],
+          "explanation": "Public HomeController.index lines 37-41 calls getAllPhotos, whose PhotoRepository.findAllOrderByUploadedAtDesc query at lines 22-27 selects PHOTO_DATA for every row without pagination or a result bound. Photo.photoData lines 39-41 is a byte[] LOB with default eager fetching, so the entire stored image corpus is materialized in memory even though the page only needs metadata. Dataset size is influenced by authenticated uploads; any anonymous gallery request can then trigger a size-proportional allocation that may exhaust the 512MB container heap (Dockerfile:28). The per-file/request caps and image pixel guard do not bound aggregate gallery allocation. No load test or exact exhaustion threshold was measured."
+        }
+      },
+      {
+        "id": "CWE-835",
+        "name": "Loop with Unreachable Exit Condition ('Infinite Loop')",
+        "status": "NOT_FOUND",
+        "category": "Code Quality",
+        "severity": "potential",
+        "storyPoint": 3,
+        "description": "The product contains an iteration or loop with an exit condition that cannot be reached, i.e., an infinite loop.",
+        "evidence": {
+          "files": [],
+          "explanation": ""
+        }
+      },
+      {
+        "id": "CWE-1057",
+        "name": "Data Access Operations Outside of Expected Data Manager Component",
+        "status": "NOT_FOUND",
+        "category": "Code Quality",
+        "severity": "potential",
+        "storyPoint": 5,
+        "description": "The product uses a dedicated, central data manager component as required by design, but it contains code that performs data-access operations that do not use this data manager.",
+        "evidence": {
+          "files": [],
+          "explanation": ""
+        }
+      }
+    ]
+  },
+  "execution_time_seconds": 0,
+  "timestamp": "2026-10-27T01:30:08.352631+00:00"
+}

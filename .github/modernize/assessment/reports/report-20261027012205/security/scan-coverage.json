@@ -1,0 +1,12 @@
+{
+  "minimumCveSeverity": "medium",
+  "dependencyScan": {
+    "resolvedDependencies": 101,
+    "advisoryFindings": 120,
+    "failedBatches": [],
+    "rangeComparison": "numeric Maven version components; RELEASE/Final suffixes normalized; prerelease ordering is a limitation",
+    "runtimeExploitability": "not assessed; includes test-scope dependencies"
+  },
+  "codeScan": "Full production source and configuration reviewed statically against 59 CWE rules. NOT_FOUND is not a guarantee of absence. No runtime exploit, load, concurrency, or deployed-environment tests were performed; dependency internals were excluded.",
+  "coreAssessment": "Core analyzer reported source analysis only because dependency output was unavailable; separate CVE analysis resolved and scanned dependencies."
+}
