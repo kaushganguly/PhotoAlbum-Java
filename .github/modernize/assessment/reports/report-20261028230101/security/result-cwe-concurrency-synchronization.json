@@ -1,0 +1,94 @@
+{
+  "input_name": "CWE - Concurrency & Synchronization",
+  "analysis_method": "LLM",
+  "status": "success",
+  "result": {
+    "finding": "Assessed 6 CWE rules in Concurrency & Synchronization: 0 FOUND, 6 NOT_FOUND",
+    "confidence": "high",
+    "evidence": [
+      "Repository-wide static assessment of singleton controllers/services, entity and upload-result lifetimes, database mutation paths, JavaScript async operations, and operational-script shared-resource patterns. Spring-managed singletons hold final injected dependencies/configuration rather than request-mutable fields; ImageReader and streams are request-local; the service uses transactional repository operations. No application-owned worker threads, shared mutable static data, explicit locks or required exclusive-access invariant violation was confirmed. Mere singleton use, absence of an optimistic-version field, or overlapping frontend requests was not treated as a security finding without a demonstrated unsafe shared state. Tests/generated code excluded as finding evidence; no tests executed."
+    ],
+    "values": [
+      {
+        "id": "CWE-543",
+        "name": "Use of Singleton Pattern Without Synchronization in a Multithreaded Context",
+        "status": "NOT_FOUND",
+        "category": "Concurrency & Synchronization",
+        "evidence": {
+          "files": [],
+          "explanation": ""
+        },
+        "severity": "potential",
+        "storyPoint": 5,
+        "description": "The product uses the singleton pattern when creating a resource within a multithreaded environment."
+      },
+      {
+        "id": "CWE-567",
+        "name": "Unsynchronized Access to Shared Data in a Multithreaded Context",
+        "status": "NOT_FOUND",
+        "category": "Concurrency & Synchronization",
+        "evidence": {
+          "files": [],
+          "explanation": ""
+        },
+        "severity": "potential",
+        "storyPoint": 5,
+        "description": "The product does not properly synchronize shared data, such as static variables across threads, which can lead to undefined behavior and unpredictable data changes."
+      },
+      {
+        "id": "CWE-662",
+        "name": "Improper Synchronization",
+        "status": "NOT_FOUND",
+        "category": "Concurrency & Synchronization",
+        "evidence": {
+          "files": [],
+          "explanation": ""
+        },
+        "severity": "potential",
+        "storyPoint": 8,
+        "description": "The product utilizes multiple threads or processes to allow temporary access to a shared resource that can only be exclusive to one process at a time, but it does not properly synchronize these actions, which might cause simultaneous accesses of this resource by multiple threads or processes."
+      },
+      {
+        "id": "CWE-667",
+        "name": "Improper Locking",
+        "status": "NOT_FOUND",
+        "category": "Concurrency & Synchronization",
+        "evidence": {
+          "files": [],
+          "explanation": ""
+        },
+        "severity": "potential",
+        "storyPoint": 8,
+        "description": "The product does not properly acquire or release a lock on a resource, leading to unexpected resource state changes and behaviors."
+      },
+      {
+        "id": "CWE-820",
+        "name": "Missing Synchronization",
+        "status": "NOT_FOUND",
+        "category": "Concurrency & Synchronization",
+        "evidence": {
+          "files": [],
+          "explanation": ""
+        },
+        "severity": "potential",
+        "storyPoint": 8,
+        "description": "The product utilizes a shared resource in a concurrent manner but does not attempt to synchronize access to the resource."
+      },
+      {
+        "id": "CWE-821",
+        "name": "Incorrect Synchronization",
+        "status": "NOT_FOUND",
+        "category": "Concurrency & Synchronization",
+        "evidence": {
+          "files": [],
+          "explanation": ""
+        },
+        "severity": "potential",
+        "storyPoint": 8,
+        "description": "The product utilizes a shared resource in a concurrent manner, but it does not correctly synchronize access to the resource."
+      }
+    ]
+  },
+  "execution_time_seconds": 0,
+  "timestamp": "2026-10-28T23:09:11.731016+00:00"
+}

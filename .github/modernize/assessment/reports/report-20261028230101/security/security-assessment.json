@@ -1,0 +1,144 @@
+{
+  "GeneratedAt": "2026-10-28T23:10:10.033857Z",
+  "ProjectPath": ".",
+  "Summary": {
+    "TotalFindings": 9,
+    "CveCount": 3,
+    "CweCount": 6,
+    "BySeverity": {
+      "mandatory": 5,
+      "optional": 1,
+      "potential": 3
+    },
+    "ByCategory": {
+      "CVE": 3,
+      "Code Quality": 2,
+      "Credentials & Secrets": 1,
+      "File & Path Security": 1,
+      "Injection Attacks": 2
+    },
+    "TotalRulesAssessed": 59,
+    "RulesPassed": 53
+  },
+  "CveFindings": [
+    {
+      "Id": "CVE-2022-45868",
+      "Name": "Password exposure in H2 Database",
+      "Category": "CVE",
+      "Severity": "mandatory",
+      "StoryPoint": 1,
+      "Description": "[CVE-2022-45868](https://github.com/advisories/GHSA-22wj-vf5f-wrvj) \u2014 Password exposure in H2 Database \n\nSeverity: HIGH\n\nVerified advisory identifiers: CVE-2022-45868; GHSA-22wj-vf5f-wrvj.\n\nCVE reference: https://nvd.nist.gov/vuln/detail/CVE-2022-45868\n\nAffected direct dependencies (Maven-resolved versions):\n\n- com.h2database:h2:2.1.214 (test; declared at pom.xml:89); validated affected range: >= 1.4.198, < 2.2.220.\n\nRecommended fix:\n- Upgrade com.h2database:h2 to 2.2.220 or a later compatible release verified outside the affected range.\n\nApplicability caveat: H2 is test-scoped, not a production runtime dependency. Exploitation requires starting the H2 web admin console with a cleartext -webAdminPassword CLI argument and local process-argument access. No such invocation or H2 console configuration was found in the repository. The vendor disputes the security classification, as documented in the advisory; this is a conditional test/tooling exposure, not a demonstrated production exploit.\n\nCoverage: full-repository direct dependencies only (including test and optional dependencies); transitive packages are not advisory-scanned. Version presence is confirmed; exploitability is not proven. No tests or application builds were run.",
+      "Files": [
+        "pom.xml:89"
+      ],
+      "Explanation": "[CVE-2022-45868](https://github.com/advisories/GHSA-22wj-vf5f-wrvj) \u2014 Password exposure in H2 Database \n\nSeverity: HIGH\n\nVerified advisory identifiers: CVE-2022-45868; GHSA-22wj-vf5f-wrvj.\n\nCVE reference: https://nvd.nist.gov/vuln/detail/CVE-2022-45868\n\nAffected direct dependencies (Maven-resolved versions):\n\n- com.h2database:h2:2.1.214 (test; declared at pom.xml:89); validated affected range: >= 1.4.198, < 2.2.220.\n\nRecommended fix:\n- Upgrade com.h2database:h2 to 2.2.220 or a later compatible release verified outside the affected range.\n\nApplicability caveat: H2 is test-scoped, not a production runtime dependency. Exploitation requires starting the H2 web admin console with a cleartext -webAdminPassword CLI argument and local process-argument access. No such invocation or H2 console configuration was found in the repository. The vendor disputes the security classification, as documented in the advisory; this is a conditional test/tooling exposure, not a demonstrated production exploit.\n\nCoverage: full-repository direct dependencies only (including test and optional dependencies); transitive packages are not advisory-scanned. Version presence is confirmed; exploitability is not proven. No tests or application builds were run."
+    },
+    {
+      "Id": "CVE-2024-47554",
+      "Name": "Apache Commons IO: Possible denial of service attack on untrusted input to XmlStreamReader",
+      "Category": "CVE",
+      "Severity": "mandatory",
+      "StoryPoint": 1,
+      "Description": "[CVE-2024-47554](https://github.com/advisories/GHSA-78wr-2p64-hpwj) \u2014 Apache Commons IO: Possible denial of service attack on untrusted input to XmlStreamReader\n\nSeverity: HIGH\n\nVerified advisory identifiers: CVE-2024-47554; GHSA-78wr-2p64-hpwj.\n\nCVE reference: https://nvd.nist.gov/vuln/detail/CVE-2024-47554\n\nAffected direct dependencies (Maven-resolved versions):\n\n- commons-io:commons-io:2.11.0 (compile; declared at pom.xml:69); validated affected range: >= 2.0, < 2.14.0.\n\nRecommended fix:\n- Upgrade commons-io:commons-io to 2.14.0 or a later compatible release verified outside the affected range.\n\nApplicability caveat: Dependency version is affected, but exploitation requires malicious input to org.apache.commons.io.input.XmlStreamReader. No XmlStreamReader or Commons IO imports were found in repository Java sources; reachable exploitation is not established by this dependency assessment.\n\nCoverage: full-repository direct dependencies only (including test and optional dependencies); transitive packages are not advisory-scanned. Version presence is confirmed; exploitability is not proven. No tests or application builds were run.",
+      "Files": [
+        "pom.xml:69"
+      ],
+      "Explanation": "[CVE-2024-47554](https://github.com/advisories/GHSA-78wr-2p64-hpwj) \u2014 Apache Commons IO: Possible denial of service attack on untrusted input to XmlStreamReader\n\nSeverity: HIGH\n\nVerified advisory identifiers: CVE-2024-47554; GHSA-78wr-2p64-hpwj.\n\nCVE reference: https://nvd.nist.gov/vuln/detail/CVE-2024-47554\n\nAffected direct dependencies (Maven-resolved versions):\n\n- commons-io:commons-io:2.11.0 (compile; declared at pom.xml:69); validated affected range: >= 2.0, < 2.14.0.\n\nRecommended fix:\n- Upgrade commons-io:commons-io to 2.14.0 or a later compatible release verified outside the affected range.\n\nApplicability caveat: Dependency version is affected, but exploitation requires malicious input to org.apache.commons.io.input.XmlStreamReader. No XmlStreamReader or Commons IO imports were found in repository Java sources; reachable exploitation is not established by this dependency assessment.\n\nCoverage: full-repository direct dependencies only (including test and optional dependencies); transitive packages are not advisory-scanned. Version presence is confirmed; exploitability is not proven. No tests or application builds were run."
+    },
+    {
+      "Id": "CVE-2026-40972",
+      "Name": "Spring Boot DevTools remote secret comparison is vulnerable to timing attacks",
+      "Category": "CVE",
+      "Severity": "mandatory",
+      "StoryPoint": 1,
+      "Description": "[CVE-2026-40972](https://github.com/advisories/GHSA-56v8-86gj-66jp) \u2014 Spring Boot DevTools remote secret comparison is vulnerable to timing attacks\n\nSeverity: HIGH\n\nVerified advisory identifiers: CVE-2026-40972; GHSA-56v8-86gj-66jp.\n\nCVE reference: https://nvd.nist.gov/vuln/detail/CVE-2026-40972\n\nAffected direct dependencies (Maven-resolved versions):\n\n- org.springframework.boot:spring-boot-devtools:2.7.18 (compile; declared at pom.xml:96); validated affected range: <= 2.7.32.\n\nRecommended fix:\n- GitHub lists no first patched version for the affected 2.7.x range. The advisory description names vendor fix 2.7.33, but availability/support must be verified; alternatively migrate to a supported patched Spring Boot line (e.g. 3.5.14 or 4.0.6, requiring coordinated Java/framework upgrades). Disable remote DevTools and exclude DevTools from production deployments as immediate mitigation.\n\nApplicability caveat: Exploitation requires Spring Boot remote DevTools to be enabled and configured with a remote secret, and an attacker able to measure comparison timing over the network. No spring.devtools.remote setting was found in checked-in configuration. Optional DevTools presence alone does not establish exposure; external configuration may differ. Spring Boot repackaged archives normally exclude DevTools unless explicitly included; the deployed artifact was not built or inspected.\n\nCoverage: full-repository direct dependencies only (including test and optional dependencies); transitive packages are not advisory-scanned. Version presence is confirmed; exploitability is not proven. No tests or application builds were run.",
+      "Files": [
+        "pom.xml:96"
+      ],
+      "Explanation": "[CVE-2026-40972](https://github.com/advisories/GHSA-56v8-86gj-66jp) \u2014 Spring Boot DevTools remote secret comparison is vulnerable to timing attacks\n\nSeverity: HIGH\n\nVerified advisory identifiers: CVE-2026-40972; GHSA-56v8-86gj-66jp.\n\nCVE reference: https://nvd.nist.gov/vuln/detail/CVE-2026-40972\n\nAffected direct dependencies (Maven-resolved versions):\n\n- org.springframework.boot:spring-boot-devtools:2.7.18 (compile; declared at pom.xml:96); validated affected range: <= 2.7.32.\n\nRecommended fix:\n- GitHub lists no first patched version for the affected 2.7.x range. The advisory description names vendor fix 2.7.33, but availability/support must be verified; alternatively migrate to a supported patched Spring Boot line (e.g. 3.5.14 or 4.0.6, requiring coordinated Java/framework upgrades). Disable remote DevTools and exclude DevTools from production deployments as immediate mitigation.\n\nApplicability caveat: Exploitation requires Spring Boot remote DevTools to be enabled and configured with a remote secret, and an attacker able to measure comparison timing over the network. No spring.devtools.remote setting was found in checked-in configuration. Optional DevTools presence alone does not establish exposure; external configuration may differ. Spring Boot repackaged archives normally exclude DevTools unless explicitly included; the deployed artifact was not built or inspected.\n\nCoverage: full-repository direct dependencies only (including test and optional dependencies); transitive packages are not advisory-scanned. Version presence is confirmed; exploitability is not proven. No tests or application builds were run."
+    }
+  ],
+  "CweFindings": [
+    {
+      "Id": "CWE-606",
+      "Name": "Unchecked Input for Loop Condition",
+      "Category": "Code Quality",
+      "Severity": "potential",
+      "StoryPoint": 3,
+      "Description": "The product does not properly check inputs that are used for loop conditions, potentially leading to a denial of service or other consequences because of excessive looping.",
+      "Files": [
+        "src/main/java/com/photoalbum/controller/HomeController.java",
+        "src/main/resources/application.properties"
+      ],
+      "Explanation": "HomeController.uploadPhotos checks only null/empty input at lines 62-66 and iterates every caller-supplied multipart file at lines 68-91, invoking image parsing/persistence for each accepted item. The configured app.file-upload.max-files-per-upload=10 (application.properties line 30) is never read or enforced. Multipart byte limits at lines 24-25 bound request bytes, not the intended per-request item/work count; many small files can cause substantially more parsing and database operations than the configured ten. This is a missing iteration/cardinality limit, not an infinite loop; authentication is required for upload, and actual DoS was not measured."
+    },
+    {
+      "Id": "CWE-789",
+      "Name": "Memory Allocation with Excessive Size Value",
+      "Category": "Code Quality",
+      "Severity": "potential",
+      "StoryPoint": 5,
+      "Description": "The product allocates memory based on an untrusted, large size value, but it does not ensure that the size is within expected limits, allowing arbitrary amounts of memory to be allocated.",
+      "Files": [
+        "src/main/java/com/photoalbum/repository/PhotoRepository.java",
+        "src/main/java/com/photoalbum/service/impl/PhotoServiceImpl.java",
+        "src/main/java/com/photoalbum/controller/HomeController.java",
+        "src/main/java/com/photoalbum/model/Photo.java"
+      ],
+      "Explanation": "PhotoRepository.findAllOrderByUploadedAtDesc lines 22-27 returns all rows and explicitly selects PHOTO_DATA without a row limit. Photo.photoData is a byte[] @Lob with no lazy-fetch override (Photo.java lines 36-41), so this path materializes stored image bytes along with the collection. PhotoServiceImpl.getAllPhotos lines 53-57 passes that unbounded list to the publicly accessible HomeController.index lines 37-41. Although each upload is size-limited, cumulative stored photo count/BLOB bytes are not bounded; increasing stored uploads increases heap allocations for every gallery request, potentially exhausting the configured heap. This is unbounded aggregate allocation, not an unbounded allocation from one uploaded image header; no measured exhaustion or anonymous upload capability is asserted."
+    },
+    {
+      "Id": "CWE-778",
+      "Name": "Insufficient Logging",
+      "Category": "Credentials & Secrets",
+      "Severity": "potential",
+      "StoryPoint": 3,
+      "Description": "When a security-critical event occurs, the product either does not record the event or omits important details about the event when logging it.",
+      "Files": [
+        "src/main/java/com/photoalbum/controller/DetailController.java",
+        "src/main/java/com/photoalbum/service/impl/PhotoServiceImpl.java",
+        "src/main/java/com/photoalbum/config/SecurityConfig.java"
+      ],
+      "Explanation": "SecurityConfig.securityFilterChain lines 54-60 requires HTTP Basic authentication for uploads and deletions. Nevertheless DetailController.deletePhoto lines 64-76 logs only the photo ID and outcome; PhotoServiceImpl.deletePhoto lines 199-216 and uploadPhoto lines 173-184 likewise log object IDs/filenames without the authenticated principal, source client or audit correlation. These are security-critical mutation events, but the application logs omit attribution to the actor. This finding is insufficient audit detail, not a claim that mutations have no logging or that Spring Security never emits any diagnostic logs. The supplied in-memory user store currently contains one admin account; the logs still cannot distinguish the client responsible for an operation."
+    },
+    {
+      "Id": "CWE-434",
+      "Name": "Unrestricted Upload of File with Dangerous Type",
+      "Category": "File & Path Security",
+      "Severity": "mandatory",
+      "StoryPoint": 8,
+      "Description": "The product allows the upload or transfer of dangerous file types that are automatically processed within its environment.",
+      "Files": [
+        "src/main/java/com/photoalbum/service/impl/PhotoServiceImpl.java",
+        "src/main/java/com/photoalbum/controller/PhotoFileController.java",
+        "src/main/java/com/photoalbum/config/SecurityConfig.java"
+      ],
+      "Explanation": "PhotoServiceImpl.uploadPhoto lines 87-94 trusts the multipart Content-Type allowlist rather than requiring a recognized image. At lines 130-149 no ImageReader is allowed without rejecting the upload, and lines 155-168 continue after non-IO parser failures and persist the original bytes. Thus an authenticated uploader can submit non-image or other disallowed file contents under an allowed image MIME label, which are subsequently published by PhotoFileController.servePhoto lines 74-83. This is a file-content/type validation bypass; database storage and image response MIME do not demonstrate server-side script execution or browser execution."
+    },
+    {
+      "Id": "CWE-79",
+      "Name": "Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting')",
+      "Category": "Injection Attacks",
+      "Severity": "optional",
+      "StoryPoint": 8,
+      "Description": "The product does not neutralize or incorrectly neutralizes user-controllable input before it is placed in output that is used as a web page that is served to other users.",
+      "Files": [
+        "src/main/resources/static/js/upload.js",
+        "src/main/java/com/photoalbum/controller/HomeController.java"
+      ],
+      "Explanation": "upload.js handleFiles lines 71-82 includes the selected file.name verbatim in validation errors; showErrors lines 215-218 interpolates those strings into innerHTML without escaping. A crafted filename containing HTML/event attributes is therefore parsed as markup when a user selects or drops that file, even when it fails upload validation. Separately, createPhotoCard lines 181-190 interpolates photo.originalFileName into attributes/text and displayNewPhotos inserts it with insertAdjacentHTML at lines 155-157; HomeController.uploadPhotos lines 75-83 returns the upload filename unchanged. Exploitation requires a user to select/drop the crafted filename or process a corresponding upload response; initial server-rendered Thymeleaf gallery pages escape filenames, so this is not evidence that all later gallery viewers receive stored XSS."
+    },
+    {
+      "Id": "CWE-89",
+      "Name": "Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection')",
+      "Category": "Injection Attacks",
+      "Severity": "mandatory",
+      "StoryPoint": 13,
+      "Description": "The product constructs all or part of an SQL command using externally-influenced input from an upstream component, but it does not neutralize or incorrectly neutralizes special elements that could modify the intended SQL command when it is sent to a downstream component. Without sufficient removal or quoting of SQL syntax in user-controllable inputs, the generated SQL query can cause those inputs to be interpreted as SQL instead of ordinary user data.",
+      "Files": [
+        "oracle-init/create-user.sh"
+      ],
+      "Explanation": "create-user.sh lines 11-19 accepts APP_USER and APP_USER_PASSWORD from the container environment and only uppercases the username. The unquoted here-document at lines 22-45 substitutes APP_USER_UPPER into a quoted SQL string at line 27 and a dynamic CREATE USER statement at line 30, and substitutes APP_USER_PASSWORD into that dynamic statement without SQL escaping. Quotes or SQL syntax in those externally supplied configuration values can change SQL structure executed as SYSTEM. This is an initialization/configuration trust-boundary issue requiring control of those environment values, not SQL injection through the photo HTTP endpoints (whose repository queries use bound parameters). Credential contents are intentionally omitted."
+    }
+  ]
+}
