@@ -1,6 +1,6 @@
 # Security Assessment Report
 
-**Generated:** 2026-11-20T06:43:12.785486Z
+**Generated:** 2026-11-20T06:38:13.211055Z
 
 ## Summary
 
@@ -1547,4 +1547,4 @@ Recommended fix: Upgrade each affected dependency to its first patched version l
 - **Story Points:** 8
 - **Files:** src/main/java/com/photoalbum/service/impl/PhotoServiceImpl.java, src/main/java/com/photoalbum/controller/PhotoFileController.java
 
-PhotoServiceImpl.uploadPhoto (line 88) authorizes uploads by checking only MultipartFile.getContentType(), which is supplied by the client. The uploaded bytes are stored without verifying that the file signature or decoded content matches the permitted image type; if ImageIO has no reader, the code still proceeds to save the bytes. PhotoFileController.servePhoto sets the response content type from the persisted MIME value at lines 74-83, so an unverified payload can be accepted and returned under an allowed image MIME type.
+PhotoServiceImpl.uploadPhoto (lines 91-98) authorizes uploads by checking only MultipartFile.getContentType(), which is supplied by the client. The uploaded bytes are stored without checking that the file signature or decoded content matches the permitted image type; files with non-image content can therefore be accepted under an allowed MIME type. PhotoFileController.servePhoto later returns the stored bytes using the persisted client MIME type (lines 59-66), so untrusted content is served as an image.
